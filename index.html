@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Raleway:ital,wght@0,300;0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
@@ -15,10 +15,11 @@
         <div class="loading"></div>
         <div class="header__brand">TS Attitude</div>
         <div class="header__motto">Spojuje nás radost z tancování, přátelství a také chuť dokázat, že se píle vyplácí! TS Attitude DKnL není jen zábava, je to naše druhá rodina.</div>
+        {% include 'partials/menu.njk' %}
     </header>
 
-    <h3 data-target="200" class="count">0</h3>
-    <h3 data-target="400" class="count">0</h3>
+    <!-- <h3 data-target="200" class="count">0</h3> -->
+    <!-- <h3 data-target="400" class="count">0</h3> -->
     <div class="mujramecek">
     <div class="ramecek">
     <h1 class="nadpis">O NÁS</h1>
@@ -34,9 +35,11 @@
     </div> -->
 
     <div class="heading-frame">
-        <h2 contenteditable="true">BABY SPORTIK</h2>
+        <h2 class="heading-frame__topRight">Pondělí 18-19 <br>6-8let</h2>
+        <h2 class="heading-frame__bottomLeft">BABY SPORTIK</h2>
     </div>
 
-    <script src="script.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/menu.js"></script>
 </body>
 </html>

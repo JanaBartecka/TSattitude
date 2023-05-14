@@ -1,0 +1,14 @@
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--backgroundColor);
+  color: var(--textColor);
+}
+
+ul {
+    margin: 0;
+}

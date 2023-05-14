@@ -1,0 +1,19 @@
+.animationLeft {
+    animation: headlineAnimation 2s ease-in-out forwards;
+  }
+  
+  .animationRight {
+    animation: headlineAnimationRight 2s ease-in-out forwards;
+  }
+  
+  @keyframes headlineAnimation {
+    to {
+    margin-left: 0;
+    }
+  }
+  
+  @keyframes headlineAnimationRight {
+    to {
+    margin-left: 0;
+    }
+  }

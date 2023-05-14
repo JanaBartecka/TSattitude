@@ -1,0 +1,32 @@
+.ramecek {
+    --c: #D2F669;
+    --s0: calc(1.25em + 6px);
+    --s1: calc(1.25em + 6px + 0.5em);
+    place-self: center;
+    position: relative;
+    width: 14em;
+    height: 5em; 
+    border: solid 0 transparent;
+    border-width: 0 15px 15px 0;
+    padding:  5px 0.5em 0.5em 70px;
+    background: var(--c) padding-box;
+  
+  /* .ramecek:nth-child(2) {
+    --c: #b4ff7d;
+    filter: invert(1);
+  } */
+      
+    .ramecek::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: inherit;
+    border-width: 10px 0 0 10px;
+    width: 14em;
+    height: 5em; 
+    box-shadow: inset 0 0 0 3px var(--c);
+    mix-blend-mode: difference;
+    pointer-events: none;
+    content: "";
+    }
+}

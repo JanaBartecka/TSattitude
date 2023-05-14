@@ -1,0 +1,65 @@
+.header {
+    background-image: url(/images/banner1.PNG);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.header__motto {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    color: white;
+    max-width: 300px;
+    padding: 10px;
+    letter-spacing: 2px;
+    font-size: 30px;
+    font-family: 'Dancing Script', cursive;
+    z-index: 2;
+}
+
+.header__brand {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    color: white;
+    font-size: 40px;
+    margin-top: 30px;
+    font-family: 'Dancing Script', cursive;
+    z-index: 2;
+}
+
+
+@keyframes example {
+    0%   {margin-left: -80vw;}
+    100% {margin-left: 50px;}
+}
+
+.header__motto span {
+  position: relative;
+  opacity: 0;
+  animation: textAnimation 3s ease-in-out forwards;
+}
+
+.header__brand span {
+    position: relative;
+    opacity: 0;
+    animation: textAnimation 3s ease-in-out forwards;
+  }
+
+@keyframes textAnimation {
+  to {
+    top:0;
+    left:0;
+    opacity:1;
+  }
+}

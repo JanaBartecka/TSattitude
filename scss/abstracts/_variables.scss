@@ -1,0 +1,56 @@
+:root {
+    --primaryColor:#679436;
+    --primaryColor-similar:#BAD29F;
+    --secondaryColor:#FFDF64;
+    --tertiaryColor:#254232;
+    --buttonColor:#E2D686;
+    --textColor:white;
+    --lightColor:white;
+    // --focusColor:#B309A6;
+    --greyColor: #E0E2DB;
+    --greyDarkColor: #889696;
+    --backgroundColor:black;
+    --darkBrightness:1;
+
+}
+
+@media (prefers-color-scheme: dark){
+    :root {
+        --primaryColor:#679436;
+        --primaryColor-similar:#BAD29F;
+        --secondaryColor:#e0c455;
+        --tertiaryColor:#254232;
+        --buttonColor:#E2D686;
+        --textColor:rgb(91, 144, 125);
+        --lightColor:white;
+        // --focusColor:#B309A6;
+        --greyColor: #E0E2DB;
+        --greyDarkColor: #889696;
+        --backgroundColor:white;
+        --darkBrightness:0.8;
+    }
+}
+
+$spacer-normal:1rem;
+$spacer-small:0.5rem;
+$spacer-middle:1.5rem;
+$spacer-big:2rem;
+$radius:10px;
+
+$minwidth-tablet:42rem;
+$minwidth-computer:63rem;
+$minwidth-singleAkce:50rem;
+$maxwidth:70rem;
+
+$minwidth-tablet-akce:30rem;
+$minwidth-computer-akce:48rem;
+
+// @mixin cardStyle {
+//     border-top-right-radius: 50px;
+//     border-bottom-left-radius: 50px;
+//     background-color: pink;
+// }
+
+
+
+

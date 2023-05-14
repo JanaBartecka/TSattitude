@@ -1,0 +1,34 @@
+
+    <div class="menu__background">
+        <nav class="menu" role="navigation" aria-hidden="true">
+            <!-- <div class="menu__logo"> -->
+                <!-- <img src="/images/zabka.jpg" alt="logo"> -->
+            <!-- </div> -->
+
+            <a class="menu__icon" href="https://www.facebook.com/groups/1282092685941096">
+                <img src="/images/fb.svg" alt="logo">
+            </a>
+
+            <a class="menu__icon" href="tel:725505234 ">
+                <img src="/images/phone.svg" alt="logo">
+            </a>
+
+            <a class="menu__icon" href="mailto:rozhybemedvur@gmail.com">
+                <img src="/images/mail.svg" alt="logo">
+            </a>
+
+            <button class="menu__hamburger" aria-expanded="false" aria-label="menu">
+                <span class="menu__bar"></span>
+                <span class="menu__bar"></span>
+                <span class="menu__bar"></span>
+            </button>
+
+            <!-- <div class="menu__navigation"> -->
+                <ul class="menu__list">
+                    <li class="menu__item {{ 'menu__item--active' if page.fileSlug === ''}}"><a href="/" class="menu__link">Úvod</a></li>
+                    <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'akce'}}"><a href="#lekce" class="menu__link">Lekce</a></li>
+                    <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'kontakt'}}"><a href="#kontakt" class="menu__link">Kontakt</a></li>
+                </ul>
+            <!-- </div> -->
+        </nav>
+    </div>
