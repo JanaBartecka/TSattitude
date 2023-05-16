@@ -8,12 +8,12 @@
 
 .header__motto {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 30px;
+    right: 30px;
     animation-name: example;
-    animation-duration: 3s;
+    animation-duration: 1.5s;
     animation-fill-mode: forwards;
-    animation-timing-function: ease-out;
+    animation-timing-function: ease-in-out;
     color: white;
     max-width: 300px;
     padding: 10px;
@@ -26,40 +26,41 @@
 .header__brand {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50px;
     animation-name: example;
-    animation-duration: 3s;
+    animation-duration: 1.5s;
     animation-fill-mode: forwards;
-    animation-timing-function: ease-out;
+    animation-timing-function: ease-in-out;
     color: white;
-    font-size: 40px;
-    margin-top: 30px;
+    font-size: 60px;
+    margin-top: 100px;
     font-family: 'Dancing Script', cursive;
     z-index: 2;
 }
 
 
 @keyframes example {
-    0%   {margin-left: -80vw;}
-    100% {margin-left: 50px;}
+    0%   {transform: scale(0);}
+    91.3% {transform: scale(1.2);}
+    100% {transform: scale(1);}
 }
 
-.header__motto span {
-  position: relative;
-  opacity: 0;
-  animation: textAnimation 3s ease-in-out forwards;
-}
+// .header__motto span {
+//   position: relative;
+//   opacity: 0;
+//   animation: textAnimation 3s ease-in-out forwards;
+// }
 
-.header__brand span {
-    position: relative;
-    opacity: 0;
-    animation: textAnimation 3s ease-in-out forwards;
-  }
+// .header__brand span {
+//     position: relative;
+//     opacity: 0;
+//     animation: textAnimation 3s ease-in-out forwards;
+//   }
 
-@keyframes textAnimation {
-  to {
-    top:0;
-    left:0;
-    opacity:1;
-  }
-}
+// @keyframes textAnimation {
+//   to {
+//     top:0;
+//     left:0;
+//     opacity:1;
+//   }
+// }

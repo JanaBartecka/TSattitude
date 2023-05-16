@@ -3,45 +3,45 @@ let bannerPicture=document.querySelector('.header')
 bannerPicture.style.height=window.innerHeight + 'px'
 console.log(window.innerHeight);
 
-document.querySelector('.header__motto').innerHTML=
-document.querySelector('.header__motto').textContent.replace(/./g,'<span>$&</span>')
+// document.querySelector('.header__motto').innerHTML=
+// document.querySelector('.header__motto').textContent.replace(/./g,'<span>$&</span>')
 
-let spans=document.querySelectorAll('.header__motto span')
-for (let i = 0; i < spans.length; i++) {
-    let left=innerWidth*Math.random()
-    let top=innerHeight*Math.random()
-    if(Math.random()<0.5){
-        spans[i].style.left='-' + left + 'px'
-    } else {
-        spans[i].style.left=left + 'px'
-    }
+// let spans=document.querySelectorAll('.header__motto span')
+// for (let i = 0; i < spans.length; i++) {
+//     let left=innerWidth*Math.random()
+//     let top=innerHeight*Math.random()
+//     if(Math.random()<0.5){
+//         spans[i].style.left='-' + left + 'px'
+//     } else {
+//         spans[i].style.left=left + 'px'
+//     }
     
-    if(Math.random()<0.5){
-        spans[i].style.top='-' + top + 'px'
-    } else {
-        spans[i].style.top=top + 'px'
-    }
-}
+//     if(Math.random()<0.5){
+//         spans[i].style.top='-' + top + 'px'
+//     } else {
+//         spans[i].style.top=top + 'px'
+//     }
+// }
 
-document.querySelector('.header__brand').innerHTML=
-document.querySelector('.header__brand').textContent.replace(/./g,'<span>$&</span>')
+// document.querySelector('.header__brand').innerHTML=
+// document.querySelector('.header__brand').textContent.replace(/./g,'<span>$&</span>')
 
-let spans1=document.querySelectorAll('.header__brand span')
-for (let i = 0; i < spans1.length; i++) {
-    let left=innerWidth*Math.random()
-    let top=innerHeight*Math.random()
-    if(Math.random()<0.5){
-        spans1[i].style.left='-' + left + 'px'
-    } else {
-        spans1[i].style.left=left + 'px'
-    }
+// let spans1=document.querySelectorAll('.header__brand span')
+// for (let i = 0; i < spans1.length; i++) {
+//     let left=innerWidth*Math.random()
+//     let top=innerHeight*Math.random()
+//     if(Math.random()<0.5){
+//         spans1[i].style.left='-' + left + 'px'
+//     } else {
+//         spans1[i].style.left=left + 'px'
+//     }
     
-    if(Math.random()<0.5){
-        spans1[i].style.top='-' + top + 'px'
-    } else {
-        spans1[i].style.top=top + 'px'
-    }
-}
+//     if(Math.random()<0.5){
+//         spans1[i].style.top='-' + top + 'px'
+//     } else {
+//         spans1[i].style.top=top + 'px'
+//     }
+// }
 
 
 //counter
