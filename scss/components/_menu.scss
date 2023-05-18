@@ -3,6 +3,7 @@
 .menu {
 
     min-height: 100px;
+    max-height: 200px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -15,7 +16,7 @@
     right: 0;
 
     &__background {
-        background-color: var(--tertiaryColor);
+        //background-color: var(--tertiaryColor);
         width: 100vw;
     }
 
@@ -32,17 +33,18 @@
     &__icon {
         // align-self: center;
         cursor: pointer;
+        max-height: 50px;
+        max-width: 50px;
 
         &:last-of-type {
-            padding-right: 80px;
+            margin-right: 80px;
         }
 
         & img {
-            width: 100%;
-            max-height: 50px;
-            background-color: white;
-            color: grey;
-            z-index: 300;
+            max-width: 100%;
+            //max-height: 50px;
+            background-color: rgba(255, 255, 255,0);
+            color: white;
         }
     }
 
@@ -52,7 +54,7 @@
         justify-content: center;
         align-items: center;
         list-style: none;
-        z-index: 3;
+        z-index: -1;
         font-size: 1.2rem;
         background-color: var(--primaryColor-similar);
         padding-right: 0;
@@ -69,6 +71,7 @@
 
     &__list.menu__active {
         opacity: 1;
+        z-index: 3;
         transition: opacity 1s ease;
     }
 

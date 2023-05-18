@@ -19,6 +19,12 @@
     width: calc(100vw - 60px);
     height: 300px;
     padding: 2rem;
+
+    &--link {
+      width: calc(100vw - 60px);
+      height: 300px;
+      cursor: pointer;
+    }
   }
   // .heading-frame:before, .heading-frame:after {
   //   content: "";
