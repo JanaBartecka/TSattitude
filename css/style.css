@@ -294,6 +294,7 @@ ul {
   width: calc(100vw - 60px);
   height: 300px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .heading-frame__topRight {
@@ -325,19 +326,26 @@ ul {
   grid-column: 1;
   grid-row: 2/3;
   border-bottom: 0;
-  border-right: 0;
   border-top: 0;
 }
 
 .heading-frame__bottomLeft {
-  margin: 0 0 0rem 0;
   font-family: "Pragati Narrow", sans-serif;
-  font-size: 2rem;
-  max-width: -moz-max-content;
-  max-width: max-content;
-  grid-column: 1/2;
-  grid-row: 3/4;
+  font-size: 1.5rem;
+  max-width: 100%;
   text-align: left;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: max-content 1fr;
+}
+.heading-frame__bottomLeft:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+  border-left: none;
+  border-top: none;
 }
 
 .heading-frame:hover {
@@ -351,29 +359,43 @@ ul {
   --s1: calc(1.25em + 6px + 0.5em);
   place-self: center;
   position: relative;
-  width: 14em;
+  width: 20em;
   height: 5em;
   border: solid 0 transparent;
   border-width: 0 15px 15px 0;
-  padding: 5px 0.5em 0.5em 70px;
+  padding: 7px 0.5em 0.5em 70px;
   background: var(--c) padding-box;
   /* .ramecek:nth-child(2) {
     --c: #b4ff7d;
     filter: invert(1);
   } */
 }
-.ramecek .ramecek::before {
+.ramecek::before {
   position: absolute;
   top: 0;
   left: 0;
   border: inherit;
   border-width: 10px 0 0 10px;
-  width: 14em;
+  width: 20em;
   height: 5em;
   box-shadow: inset 0 0 0 3px var(--c);
   mix-blend-mode: difference;
   pointer-events: none;
   content: "";
+}
+
+.mujramecek {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nadpis {
+  margin: 1rem 0 0 0;
+}
+
+.odstavec {
+  margin-top: 1rem;
 }
 
 .count {
@@ -400,4 +422,63 @@ ul {
   to {
     margin-left: 0;
   }
+}
+.lektorky {
+  display: grid;
+}
+.lektorky__lektorka {
+  position: relative;
+  width: 300px;
+  height: 250px;
+}
+.lektorky__item {
+  background-image: url(/images/banner.PNG);
+  background-position: center top;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.lektorky__item--active {
+  filter: blur(4px);
+}
+.lektorky__plus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 20px;
+  width: 20px;
+  background-color: red;
+  border-radius: 50%;
+}
+.lektorky__plus--bar-H, .lektorky__plus .lektorky__plus--bar-V {
+  position: absolute;
+  width: 15px;
+  height: 1px;
+  background-color: blue;
+}
+.lektorky__plus--bar-H {
+  margin-top: 9px;
+  margin-left: 2.5px;
+}
+.lektorky__plus--bar-V {
+  transform: rotate(90deg);
+  margin-top: 9px;
+  margin-left: 2.5px;
+}
+.lektorky__description {
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  z-index: 5;
+  border: 3px solid #f1f1f1;
+  font-weight: 600;
+  filter: blur(0px);
 }/*# sourceMappingURL=style.css.map */
