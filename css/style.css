@@ -1,32 +1,14 @@
 :root {
-  --primaryColor:#679436;
-  --primaryColor-similar:#BAD29F;
-  --secondaryColor:#FFDF64;
-  --tertiaryColor:#254232;
+  --primaryColor:#FDFFB6;
+  --secondaryColor:#8F5C38;
+  --tertiaryColor:#688B58;
   --buttonColor:#E2D686;
-  --textColor:white;
+  --textColor:var(--primaryColor);
   --lightColor:white;
-  --greyColor: #E0E2DB;
-  --greyDarkColor: #889696;
-  --backgroundColor:black;
+  --backgroundColor:#001514;
   --darkBrightness:1;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primaryColor:#679436;
-    --primaryColor-similar:#BAD29F;
-    --secondaryColor:#e0c455;
-    --tertiaryColor:#254232;
-    --buttonColor:#E2D686;
-    --textColor:rgb(91, 144, 125);
-    --lightColor:white;
-    --greyColor: #E0E2DB;
-    --greyDarkColor: #889696;
-    --backgroundColor:white;
-    --darkBrightness:0.8;
-  }
-}
 html {
   box-sizing: border-box;
 }
@@ -94,33 +76,37 @@ ul {
 .header__motto {
   position: absolute;
   bottom: 30px;
-  right: 30px;
+  right: 20vw;
   animation-name: example;
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
-  color: white;
+  color: var(--primaryColor);
   max-width: 300px;
-  padding: 10px;
   letter-spacing: 2px;
   font-size: 30px;
   font-family: "Dancing Script", cursive;
   z-index: 2;
+  padding-left: 1rem;
 }
 
 .header__brand {
   position: absolute;
-  top: 0;
+  top: 20vh;
   left: 50px;
   animation-name: example;
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
-  color: white;
-  font-size: 60px;
-  margin-top: 100px;
+  color: var(--primaryColor);
+  font-size: 100px;
   font-family: "Dancing Script", cursive;
   z-index: 2;
+}
+@media screen and (min-width: 42rem) {
+  .header__brand {
+    left: 25vw;
+  }
 }
 
 @keyframes example {
@@ -198,9 +184,9 @@ ul {
 .menu__link {
   display: block;
   text-decoration: none;
-  color: black !important;
+  color: black;
   padding: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   padding: 1.5rem 1.5rem;
 }
 .menu__link:hover {
@@ -253,13 +239,18 @@ ul {
   }
   .menu__list {
     display: flex;
+    flex-direction: row;
     max-width: -moz-max-content;
     max-width: max-content;
-    width: auto;
-    left: auto;
-    top: auto;
-    position: relative;
-    background-color: var(--primaryColor);
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    z-index: 2;
+    height: -moz-max-content;
+    height: max-content;
+    min-height: 100px;
+    max-height: 200px;
+    padding-right: 350px;
   }
   .menu__hamburger {
     display: none;
@@ -271,6 +262,18 @@ ul {
   }
   .menu__item:last-child {
     border: 0;
+  }
+  .menu__link {
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  .menu__icon {
+    z-index: 3;
+  }
+  .menu__icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in;
   }
 }
 
@@ -354,7 +357,7 @@ ul {
 }
 
 .ramecek {
-  --c: #D2F669;
+  --c: var(--tertiaryColor);
   --s0: calc(1.25em + 6px);
   --s1: calc(1.25em + 6px + 0.5em);
   place-self: center;
