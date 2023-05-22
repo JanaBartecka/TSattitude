@@ -71,8 +71,8 @@ h1, h2, h3 {
 }
 
 .section__2 {
-  background-color: var(--backgroundColor1);
-  color: var(--textColor1);
+  background-color: var(--backgroundColor2);
+  color: var(--textColor2);
 }
 
 .grid__cards {
@@ -316,9 +316,11 @@ h1, h2, h3 {
 }
 .menu__hamburger.menu__active .menu__bar:nth-child(1) {
   transform: translateY(11px) rotate(675deg);
+  z-index: 4;
 }
 .menu__hamburger.menu__active .menu__bar:nth-child(3) {
   transform: translateY(-11px) rotate(-675deg);
+  z-index: 4;
 }
 .menu__hamburger {
   display: block;
@@ -328,7 +330,7 @@ h1, h2, h3 {
   height: 50px;
   width: 50px;
   position: fixed;
-  z-index: 2;
+  z-index: 4;
   right: 20px;
   padding-top: 0px;
 }
@@ -341,6 +343,7 @@ h1, h2, h3 {
   transition: all 0.3s ease-in-out;
   background: rgb(253, 255, 182);
   background: radial-gradient(circle, rgb(253, 255, 182) 0%, rgb(64, 64, 64) 100%);
+  z-index: 4;
 }
 @media screen and (min-width: 63rem) {
   .menu {
@@ -483,10 +486,18 @@ h1, h2, h3 {
   display: block;
   text-decoration: none;
   padding: 1rem;
+  background-color: var(--backgroundColor1);
   text-align: center;
   font-size: 0.9rem;
   font-weight: 300;
+  color: var(--textColor1);
 }
+.footer__link, .footer__link:visited {
+  color: var(--textColor1);
+  font-weight: 600;
+  text-decoration: none;
+}
+
 .heading-frame {
   position: absolute;
   left: 0;
@@ -520,12 +531,11 @@ h1, h2, h3 {
 .heading-frame__topRight {
   font-family: "Pragati Narrow", sans-serif;
   font-size: 1.5rem;
-  max-width: 100%;
+  width: 100%;
   text-align: right;
   display: grid;
   gap: 10px;
   grid-template-columns: 1fr max-content;
-  grid-auto-flow: column;
   text-transform: uppercase;
 }
 @media screen and (min-width: 42rem) {
@@ -541,7 +551,6 @@ h1, h2, h3 {
   border: 1px solid white;
   border-right: none;
   border-bottom: none;
-  margin-top: 0.2rem;
 }
 
 .heading-frame:before {
@@ -559,7 +568,7 @@ h1, h2, h3 {
 .heading-frame__bottomLeft {
   font-family: "Pragati Narrow", sans-serif;
   font-size: 1.5rem;
-  max-width: 100%;
+  width: 100%;
   text-align: left;
   display: grid;
   gap: 10px;
@@ -676,7 +685,7 @@ h1, h2, h3 {
   background: var(--primaryColor);
   color: var(tertiaryColor);
   overflow: auto;
-  z-index: 3;
+  z-index: 5;
 }
 .dialog__window {
   width: 100%;

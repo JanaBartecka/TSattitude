@@ -107,10 +107,12 @@
 
     &__hamburger.menu__active &__bar:nth-child(1) {
         transform: translateY(11px) rotate(675deg);
+        z-index: 4;
     }
 
     &__hamburger.menu__active &__bar:nth-child(3) {
         transform: translateY(-11px) rotate(-675deg);
+        z-index: 4;
     }
 
     &__hamburger {
@@ -122,7 +124,7 @@
         height: 50px;
         width: 50px;
         position: fixed;
-        z-index: 2;
+        z-index: 4;
         right: 20px;
         padding-top: 0px;
     }
@@ -136,6 +138,7 @@
         transition: all 0.3s ease-in-out;
         background: rgb(253,255,182);
         background: radial-gradient(circle, rgba(253,255,182,1) 0%, rgba(64,64,64,1) 100%);
+        z-index: 4
         ;
     }
 

@@ -5,14 +5,21 @@
         display: block;
         text-decoration: none;
         padding: 1rem;
-        //background-color: var(--greyDarkColor);
+        background-color: var(--backgroundColor1);
         text-align: center;
         font-size: 0.9rem;
         font-weight: 300;
-        //color: var(--lightColor);
+        color: var(--textColor1);
 
         &:hover {
             //color: var(--buttonColor);
         }
+
+    }
+
+    &__link,&__link:visited  {
+        color: var(--textColor1);
+        font-weight: 600;
+        text-decoration: none;
     }
 }
