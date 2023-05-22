@@ -1,0 +1,57 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.section__inner {
+    @include m.zarovnani;
+}
+  
+.section__1 {
+    background-color: var(--backgroundColor1);
+    color: var(--textColor1);
+}
+
+.section__2 {
+    background-color: var(--backgroundColor1);
+    color: var(--textColor1);
+}
+
+.grid {
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        justify-items: stretch;
+        align-items: flex-start;
+        gap: v.$spacer-middle;
+        padding-top: v.$spacer-middle;
+        @include m.zarovnani;
+
+        @media screen and (min-width:v.$minwidth-computer) {
+            max-width: v.$maxwidth;
+        }
+
+    }
+    
+    &__item {
+        position: relative;
+        transition: all 0.5s ease-out;
+        @include m.lekceZarovnani;
+        &:hover {
+            transform: rotate(5deg);
+            transition: transform 0.5s ease-out;
+        }
+
+        &--cover {
+            @include m.lekceZarovnani;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3;
+        }
+
+    }
+
+
+}

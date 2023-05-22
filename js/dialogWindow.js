@@ -8,9 +8,9 @@ let dialogButtons=document.querySelectorAll('.dialog__button')
 
 dialogButtons.forEach(function(oneButton){
   oneButton.addEventListener('click', (e) => {
-
   if (e.target.id.slice(0,15)==='dialog__openBtn') {
     dialogButtonID=e.target.id
+    
     dialogNumber=dialogButtonID.split("--")[1];
     dialog=document.getElementById('dialog--' + dialogNumber);
     dialogWindow=dialog.querySelector('.dialog .dialog__window');

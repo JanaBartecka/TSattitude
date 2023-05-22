@@ -83,7 +83,7 @@ window.addEventListener('scroll',() => {
     //po nacteni skryje loading page
     document.querySelector('.loading').classList.add('loading--hidden')
     document.querySelector('.loading').addEventListener('transitionend',()=> {
-        document.body.removeChild(loading)
+        //document.body.removeChild(loading)
     })
     //spusti uvodni animaci+
 })

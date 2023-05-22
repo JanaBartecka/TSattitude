@@ -37,7 +37,7 @@
         max-width: 50px;
 
         &:last-of-type {
-            margin-right: 80px;
+            margin-right: 100px;
         }
 
         & img {
@@ -54,10 +54,10 @@
         justify-content: center;
         align-items: center;
         list-style: none;
-        z-index: -1;
+        //z-index: -1;
         font-size: 1.2rem;
-        background-color: var(--primaryColor-similar);
-        padding-right: 0;
+        background-color: var(--backgroundColor2);
+        padding: 0;
         position: fixed;
         gap: 0;
         top: 0;
@@ -78,10 +78,11 @@
     &__link {
         display: block;
         text-decoration: none;
-        color: black;
+        color: var(--textColor2);
         padding: 1rem;
         font-weight: 600;
         padding: v.$spacer-middle v.$spacer-middle;
+        width: 100%;
     }
 
     &__link:hover {
@@ -92,10 +93,11 @@
     &__item {
         text-align: center;
         color: var(--textColor);
+        width: 100%;
     }
 
     &__item--active &__link {
-        background-color: var(--buttonColor);
+        background-color: var(--secondaryColor);
         color: var(--lightColor);
     }
 
@@ -114,26 +116,26 @@
     &__hamburger {
         display: block;
         cursor: pointer;
-        background-color: rgba(0,0,0,0);
-        border-radius: 50%;
+        background-color: rgba(0,0,0,0.2);
+        //border-radius: 50%;
         border: none;
         height: 50px;
         width: 50px;
         position: fixed;
-        z-index: 200;
-        right: 10px;
+        z-index: 2;
+        right: 20px;
         padding-top: 0px;
     }
 
     &__bar {
         display: block;
-        width: 30px;
+        width: 40px;
         height: 3px;
         border-radius: 30%;
         margin: 8px auto;
         transition: all 0.3s ease-in-out;
-        background-color: #4158D0;
-        background-image: linear-gradient(62deg, #4158D0 0%, #000000 59%, #ff7070 100%);
+        background: rgb(253,255,182);
+        background: radial-gradient(circle, rgba(253,255,182,1) 0%, rgba(64,64,64,1) 100%);
         ;
     }
 
@@ -143,16 +145,14 @@
         &__list {
             display: flex;
             flex-direction: row;
-            max-width: -webkit-max-content;
-            max-width: -moz-max-content;
-            max-width: max-content;
+            max-width: 100%;
             // width: auto;
             // left: auto;
             // top: auto;
             opacity: 1;
-            background-color: rgba(0,0,0,0.2);
+            background-color: rgba(0,0,0,0.4);
             position: fixed;
-            z-index: 2;
+            z-index: 3;
             height: max-content;
             min-height: 100px;
             max-height: 200px;

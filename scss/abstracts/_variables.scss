@@ -1,14 +1,16 @@
 :root {
-    --primaryColor:#FDFFB6;
+    --primaryColor:#fdffb6;
     --secondaryColor:#8F5C38;
     --tertiaryColor:#688B58;
     --buttonColor:#E2D686;
-    --textColor:var(--primaryColor);
+    --textColor1:var(--primaryColor);
+    --textColor2:var(--backgroundColor1);
     --lightColor:white;
     // --focusColor:#B309A6;
     // --greyColor: #E0E2DB;
     // --greyDarkColor: #889696;
-    --backgroundColor:#001514;
+    --backgroundColor1:#404040;
+    --backgroundColor2:var(--primaryColor);
     --darkBrightness:1;
 
 }

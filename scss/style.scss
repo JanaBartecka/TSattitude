@@ -1,12 +1,17 @@
 @use 'abstracts/variables';
 @use 'abstracts/basics';
+@use 'abstracts/mixins';
+@use 'abstracts/general';
 
 @use 'components/loading';
 @use 'components/header';
 @use 'components/menu';
+@use 'components/lektorky';
+@use 'components/lekce';
+@use 'components/footer';
 
 @use 'components/headingFrame';
 @use 'components/ramecek';
 @use 'components/counter';
 @use 'components/animation';
-@use 'components/lektorky';
+@use 'components/dialogWindow';
