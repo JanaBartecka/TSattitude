@@ -1,16 +1,30 @@
 .ramecek {
-    --c: var(--primaryColor);
+
+  &__color1 {
+    color: var(--textColor1);
+    background-color: var(--backgroundColor1);
+  }
+
+  &__color2 {
+    color: var(--textColor2);
+    background-color: var(--backgroundColor2);
+  }
+
+    //--c: var(--primaryColor);
     --s0: calc(1.25em + 6px);
     --s1: calc(1.25em + 6px + 0.5em);
     //place-self: center;
     position: relative;
     max-width: max-content;
-    height:3em; 
+    height:2em; 
     border: solid 0 transparent;
-    border-width: 0 5px 2px 0;
+    border-width: 0 -5px 2px 0;
     padding:  10px 0.5em 0.5em 20px;
     background: var(--c) padding-box;
-    color: black;
+    background-color: inherit;
+    color: inherit;
+    font-size: 2rem;
+    font-weight: 400;
       
     &::before {
     position: absolute;
@@ -20,14 +34,37 @@
     border: solid 0 transparent;
     border-width: 5px 2px 0 5px;
     width: 100%;
-    height: 3em; 
+    height: 2em; 
     //margin-right: 8px;
-    box-shadow: inset 0 0 0 1px var(--c);
+    //box-shadow: inset 0 0 0 1px inherit;
     mix-blend-mode: difference;
     pointer-events: none;
     box-sizing: content-box;
     content: "";
     }
+
+    &.ramecek__color1::before {
+      box-shadow: inset 0 0 0 1px var(--backgroundColor1);
+    }
+
+    &.ramecek__color2::before {
+      box-shadow: inset 0 0 0 1px var(--backgroundColor2);
+    }
+}
+
+.nadpis {
+  font-size: 2rem;
+  color: var(--backgroundColor2);
+  position: relative;
+  padding-left: 70px;
+}
+
+.letter {
+  font-size: 2em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
 }
 
 .mujramecek {
@@ -35,25 +72,25 @@
   align-items: center;
   justify-content: center;
   //display: inline-block;
-  margin-top: 30px;
+  //margin-top: 30px;
 }
 
 .test{
   width: max-content;
   height: max-content;
-  background-color: var(--primaryColor);
+  background-color: var(--backgroundColor2);
   //background: rgb(0,0,0);
   //background: radial-gradient(circle,  rgba(124, 68, 68,1) 0%, rgba(124, 68, 68,0.8) 0%,  rgba(124, 68, 68,0) 100%);
   border-radius: 95% 5% 5% 6%;
   border: none;
   //border: solid 2px blue;
-  padding: 30px 30px 20px 17px;
+  padding: 50px 60px 20px 30px;
   position: relative;
 }
 
 .test2 {
   position: absolute;
-  left: 22px;
+  left: 18px;
   padding-left: 10px;
   top: 15px;
   width: max-content;

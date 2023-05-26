@@ -16,6 +16,10 @@
     opacity: 0;
     visibility: hidden;
     }
+
+    &--dispNone {
+      display: none;
+    }
   
     &::after {
     content:'';

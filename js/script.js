@@ -1,7 +1,6 @@
 //zobrazeni banneru na celou obrazovku
 let bannerPicture=document.querySelector('.header')
 bannerPicture.style.height=window.innerHeight + 'px'
-console.log(window.innerHeight);
 
 // document.querySelector('.header__motto').innerHTML=
 // document.querySelector('.header__motto').textContent.replace(/./g,'<span>$&</span>')
@@ -83,7 +82,7 @@ window.addEventListener('scroll',() => {
     //po nacteni skryje loading page
     document.querySelector('.loading').classList.add('loading--hidden')
     document.querySelector('.loading').addEventListener('transitionend',()=> {
-        //document.body.removeChild(loading)
+        document.querySelector('.loading').classList.add('loading--dispNone')
     })
     //spusti uvodni animaci+
 })

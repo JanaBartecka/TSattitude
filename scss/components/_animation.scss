@@ -7,13 +7,23 @@
   }
   
   @keyframes headlineAnimation {
-    to {
-    margin-left: 0;
+    0% {
+      opacity: 0;
+      transform: translateY(-100vw);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
   
   @keyframes headlineAnimationRight {
-    to {
-    margin-left: 0;
+    0% {
+      opacity: 0;
+      transform: translateX(-100vw);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
     }
   }

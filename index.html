@@ -11,7 +11,7 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="uvod">
         <div class="loading"></div>
         <div class="header__brand">TS Attitude</div>
         <div class="header__motto">"TS Attitude DKnL není jen zábava, je to naše druhá rodina." TS Attitude DKnL</div>
@@ -22,15 +22,34 @@
         <!-- <h3 data-target="200" class="count">0</h3> -->
         <!-- <h3 data-target="400" class="count">0</h3> -->
     <!-- </section> -->
-<section class="section__1">
+<section class="section__1" id="onas">
     <div class="section__inner">
         <div class="mujramecek">
-            <div class="ramecek">
-                <h1 class="nadpis">O NÁS</h1>
+            <div class="ramecek ramecek__color2">
+                <h1 class="animationLeft">O NÁS</h1>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="mujramecek">
+            <div class="test">
+                <div class="test2">
+                
+                    <h1 class="nadpis animationLeft"><span class="letter">O</span> NÁS</h1>
+                </div>
             </div>
         </div>
 
-        <p>Vítejte na stránkách Taneční skupiny Attitude Dvůr Králové nad Labem! Jsme taneční skupina, která byla založena v roce 2011 Lucií Sýkorovou, ale naše historie sahá do roku 2007, kdy jsme se začali aktivně podílet na tanečních kroužcích v DDM1. Naše skupina se skládá z více než 170 členů ve věku od 3 let až po dospělé, kteří mají společné to, že milují tanec a pohyb.</p>
+        <div class="mujramecek">
+            <div class="test">
+                <div class="test2">
+                
+                    <h1 class="nadpis animationLeft"><span class="letter">L</span>EKTORKY</h1>
+                </div>
+            </div>
+        </div>
+
+        <p class="test11 animationRight">Vítejte na stránkách Taneční skupiny Attitude Dvůr Králové nad Labem! Jsme taneční skupina, která byla založena v roce 2011 Lucií Sýkorovou, ale naše historie sahá do roku 2007, kdy jsme se začali aktivně podílet na tanečních kroužcích v DDM1. Naše skupina se skládá z více než 170 členů ve věku od 3 let až po dospělé, kteří mají společné to, že milují tanec a pohyb.</p>
 
         <p>Od našich začátků jsme se účastnili pohárových i republikových tanečních soutěží, kde jsme získali mnoho krásných umístění. Kromě účasti na soutěžích také vytváříme choreografie na různé akce a realizujeme vlastní projekty. Jsme hrdí na to, že naše skupina disponuje řadou vlastních lektorů, kteří naše členy vedou ke stále lepším výkonům. Pravidelně se také učíme od lektorů z předních tanečních skupin v České republice.</p>
         
@@ -41,54 +60,45 @@
 </section>
 
 
-<section class="section__2">
+<section class="section__2" id="lekce">
     <div class="section__inner">
         <div class="mujramecek">
-            <div class="ramecek">
-                <h1 class="nadpis">LEKCE</h1>
+            <div class="ramecek ramecek__color1 animationLeft">
+                <h1 class="animationLeft">LEKCE</h1>
             </div>
         </div>
 
-        <div class="mujramecek">
-        <div class="test">
-            <div class="test2">
-            
-            <h1 class="nadpis">LEKCE</h1>
-        </div>
-        </div>
-    </div>
 
-    <div class="grid__cards">
+    <div class="grid__cards grid__cards--lekce">
         <div class="grid__item">
             <div class="grid__item--cover dialog__button" id="dialog__openBtn--1"></div>
             <div class="heading-frame lekce__background--1">
-                <div class="heading-frame__topRight">Pondělí 18-19 <br>6-8let</div>
-                <div class="heading-frame__bottomLeft">BABY SPORTIK</div>
+                <div class="heading-frame__topRight"><span class="heading-frame__background">Pondělí 18-19 <br>6-8let</span></div>
+                <div class="heading-frame__bottomLeft"><span class="heading-frame__background">BABY SPORTIK</span></div>
             </div>
         </div>
 
         <div class="grid__item dialog__button" id="dialog__openBtn--2">
             <div class="heading-frame lekce__background--1">
-                <div class="heading-frame__topRight">Pondělí 18-19 <br>6-8let</div>
-                <div class="heading-frame__bottomLeft">BABY SPORTIK</div>
+                <div class="heading-frame__topRight"><span class="heading-frame__background">Pondělí 18-19 <br>6-8let</span></div>
+                <div class="heading-frame__bottomLeft"><span class="heading-frame__background">BABY SPORTIK</span></div>
             </div>
         </div>
 
     </div>
-
-    </div>
+</div>
 </section>
 
-<!-- //////////////////////////////pondeli//////////////////////////////// -->
+<!-- //////////////////////////////baby sportik//////////////////////////////// -->
 <div class="dialog" id="dialog--1" aria-labelledby="dialog__openBtn--1" aria-modal="true" role="dialog">
     <div class="dialog__window">
         <button class="dialog__close dialog__closeBtn--1" aria-label="Zavři modální okno" type="button">&times;</button>
         <div class="dialog__content">
             
-            <h1>BABY SPORTÍK</h1>
+            <h1 class="dialog__headline">BABY SPORTÍK</h1>
 
             <div class="grid__cards dialog__grid">
-                <div class="dialog__content--1">
+                <div class="dialog__content--inner">
                     
                     <div class="dialog__item--grid">
                         <div class="dialog__icon"><img class="dialog__img" src="/images/icons/frodoxv_Family.svg" alt=""></div>
@@ -97,13 +107,16 @@
                     
                             <p>Lekce jsou určeny pro holky i kluky ve věku od 3 do 5 let.</p>
                         </div>
+
                     </div>
                 </div>
 
-                <div class="dialog__content--2">
+                <div class="dialog__content--inner">
                     
                     <div class="dialog__item--grid">
-                        <div class="dialog__icon"><img src="/images/icons/Calendar-icon.svg" alt=""></div>
+                        <div class="dialog__icon"><svg class="dialog__img" id="Layer_1" xml:space="preserve" version="1.1" viewbox="0 0 325.594 368.981">
+                            <path id="path3026" d="M263.41 226.14V54.84H61.86l-20.805 12.3v247h212.89v-22.035h30.598c-.001 0-21.134-16.965-21.134-65.965zm-14-37h-36.45v-39h36.441v38.999zm-89.19-84v39h-40.75v-39h40.75zm6 0h40.75v39h-40.75v-39zm-90.356 0h37.605v39H75.858v-39zm0 45.001h37.605v39H75.858v-38.999zm0 44.998h37.605v31.008c0 2.792.059 5.451.166 7.994H75.854v-39.002zm43.606 31.008v-31.008h40.75v31.008c0 2.792.059 5.451.166 7.994h-40.745c-.111-2.53-.171-5.187-.171-7.994zm0-37.008v-39h40.75v38.999h-40.75zm46.75-38.998h40.75v38.999h-40.75v-38.999zm83.191-6H212.97v-39h36.441v39zm-135.41 96c1.581 19.828 6.476 31.323 11.354 37.963H86.229c-.952-.84-2.545-2.62-4.217-6.1-2.521-5.24-5.467-14.92-6.04-31.86h38.027zm19.349 37.963c-4.706-4.322-11.4-14.504-13.334-37.963h40.735c1.581 19.828 6.476 31.323 11.354 37.963H133.35zm46.75 0c-4.706-4.322-11.4-14.504-13.334-37.963h40.735c1.581 19.828 6.476 31.323 11.354 37.963H180.1zm-13.707-43.963c-.11-2.53-.171-5.188-.171-7.994v-31.008h40.75v31.008c0 2.792.059 5.451.166 7.994h-40.745zm46.579-7.994v-31.008h36.441v37.006c0 .672.011 1.332.018 1.996h-36.288c-.111-2.53-.171-5.187-.171-7.994zm26.976 73.992h-184.9V75.129l6.805-4.022v163.04c0 54 21.133 57.957 21.133 57.957h156.95v8.035zm14-22.035h-27.099c-4.706-4.322-11.4-14.504-13.334-37.963h36.072c.635 14.755 3.059 27.463 7.253 37.963h-2.892z"/>
+                          </svg></div>
                         <div>
                             <h2>Kdy</h2>
                         
@@ -114,7 +127,7 @@
                     </div>
                 </div>
 
-                <div class="dialog__content--2">
+                <div class="dialog__content--inner">
                     
                     <div class="dialog__item--grid">
                         <div class="dialog__icon"><img src="/images/icons/Calendar-icon.svg" alt=""></div>
@@ -139,7 +152,7 @@
                     </div>
                 </div>
 
-                <div class="dialog__content--2">
+                <div class="dialog__content--inner">
                     
                     <div class="dialog__item--grid">
                         <div class="dialog__icon"><img src="/images/icons/Calendar-icon.svg" alt=""></div>
@@ -159,7 +172,7 @@
                     </div>
                 </div>
 
-                <div class="dialog__content--2">
+                <div class="dialog__content--inner">
                     
                     <div class="dialog__item--grid">
                         <div class="dialog__icon"><img src="/images/icons/Calendar-icon.svg" alt=""></div>
@@ -171,7 +184,7 @@
                     </div>
                 </div>
 
-                <div class="dialog__content--2">
+                <div class="dialog__content--inner">
                     
                     <div class="dialog__item--grid">
                         <div class="dialog__icon"><img src="/images/icons/Calendar-icon.svg" alt=""></div>
@@ -207,11 +220,11 @@
     </div> -->
 
 
-<section class="section__1">
+<section class="section__1" id="lektorky">
     <div class="section__inner">
         <div class="mujramecek">
-            <div class="ramecek">
-                <h1 class="nadpis">LEKTORKY</h1>
+            <div class="ramecek ramecek__color2">
+                <h1 class="animationLeft">LEKTORKY</h1>
             </div>
         </div>
 
@@ -244,6 +257,10 @@
         </div>
     </div>
 </section>
+
+{% include 'partials/fotogalerie.njk' %}
+
+{% include 'partials/kontakt.njk' %}
 
 {% include 'partials/footer.njk' %}
 {% include 'partials/javascript.njk' %}

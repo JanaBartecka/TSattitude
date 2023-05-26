@@ -5,11 +5,11 @@
         display: block;
         text-decoration: none;
         padding: 1rem;
-        background-color: var(--backgroundColor1);
+        //background-color: var(--backgroundColor1);
         text-align: center;
         font-size: 0.9rem;
         font-weight: 300;
-        color: var(--textColor1);
+        //color: var(--textColor1);
 
         &:hover {
             //color: var(--buttonColor);
@@ -18,7 +18,8 @@
     }
 
     &__link,&__link:visited  {
-        color: var(--textColor1);
+        //color: var(--textColor1);
+        color: inherit;
         font-weight: 600;
         text-decoration: none;
     }

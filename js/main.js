@@ -1,3 +1,4 @@
+//insert current year into footer
 let currentYear=document.querySelector('.currentYear')
 let GetDnesniDatum=new Date()
 
