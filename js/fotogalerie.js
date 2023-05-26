@@ -1,4 +1,4 @@
-// window.addEventListener('load',()=> {
+window.addEventListener('load',()=> {
 
     var gallery = document.querySelector('#gallery');
     var getVal = function (elem, style) { return parseInt(window.getComputedStyle(elem).getPropertyValue(style)); };
@@ -32,4 +32,4 @@
         });
     });
     
-    // })
+    })
