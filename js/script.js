@@ -76,22 +76,8 @@ window.addEventListener('scroll',() => {
 //     }
 // })
 
-//loading page
-//window.onload=() => {
-window.addEventListener('load',()=> {
 
-
-
-    //po nacteni skryje loading page
-    document.querySelector('.loading').classList.add('loading--hidden')
-    document.querySelector('.loading').addEventListener('transitionend',()=> {
-        document.querySelector('.loading').classList.add('loading--dispNone')
-        window.scrollTo({
-            top:0,
-            behavior:'smooth'
-        })
-
-        const AllAnimations=document.querySelectorAll('.AddAnimLeft')
+const AllAnimations=document.querySelectorAll('.AddAnimLeft')
 // console.log(AllAnimations);
 
 window.addEventListener('scroll',()=> {
@@ -122,6 +108,24 @@ window.addEventListener('scroll',()=> {
             }
     })
 }), {once:true}
+
+//loading page
+//window.onload=() => {
+window.addEventListener('load',()=> {
+
+
+
+    //po nacteni skryje loading page
+    document.querySelector('.loading').classList.add('loading--hidden')
+    document.querySelector('.loading').addEventListener('transitionend',()=> {
+
+
+
+        document.querySelector('.loading').classList.add('loading--dispNone')
+        window.scrollTo({
+            top:0,
+            behavior:'smooth'
+        })
 
     })
 })
