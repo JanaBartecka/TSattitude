@@ -56,6 +56,12 @@ h1 {
   font-weight: 400;
 }
 
+a {
+  text-decoration: none;
+  font-weight: 600;
+  color: inherit;
+}
+
 .section__inner {
   padding: 2rem 1.5rem;
   margin-left: auto;
@@ -383,6 +389,10 @@ h1 {
     max-height: 200px;
     right: 250px;
   }
+  .menu__list--full {
+    max-width: 100%;
+    right: 0;
+  }
   .menu__hamburger {
     display: none;
   }
@@ -614,24 +624,47 @@ h1 {
 }
 
 .contact {
-  max-width: calc(100vw - 1rem);
-  padding: 1.5rem;
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 1.5rem;
-  -moz-column-gap: 0.5rem;
-       column-gap: 0.5rem;
+  gap: 2rem;
+  padding: 2rem 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+@media screen and (min-width: 63rem) {
+  .contact {
+    max-width: 70rem;
+  }
 }
 .contact__title {
   width: 100px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+.contact__title svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--textColor1);
+}
+.contact__info {
+  align-self: center;
+  padding-left: 1rem;
 }
 .contact__item {
   display: flex;
   flex: 1 1 100%;
-  flex-direction: column;
+  flex-direction: row;
 }
 .contact__map {
   width: 100%;
+  height: 300px;
+}
+.contact__link {
+  font-weight: 600;
+  text-decoration: none;
 }
 .contact__link:link {
   color: var(--buttonColor);
@@ -654,18 +687,17 @@ h1 {
 }
 @media screen and (min-width: 42rem) {
   .contact {
-    grid-auto-flow: column;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: repeat(4, auto);
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
   }
   .contact__map {
-    grid-row: 1/-1;
-    grid-column: 2;
+    grid-row: 3/4;
+    grid-column: 1/3;
   }
-}
-@media screen and (min-width: 63rem) {
-  .contact {
-    max-width: 70rem;
+  .contact__adress {
+    grid-row: 2/3;
+    grid-column: 1/3;
   }
 }
 
@@ -820,7 +852,7 @@ h1 {
 
 .nadpis {
   font-size: 2rem;
-  color: var(--backgroundColor2);
+  color: var(--backgroundColor1);
   position: relative;
   padding-left: 70px;
 }
@@ -831,6 +863,7 @@ h1 {
   top: 50%;
   transform: translateY(-50%);
   left: 10px;
+  color: var(--backgroundColor2);
 }
 
 .mujramecek {
@@ -844,7 +877,7 @@ h1 {
   width: max-content;
   height: -moz-max-content;
   height: max-content;
-  background-color: var(--backgroundColor2);
+  background-color: var(--backgroundColor1);
   border-radius: 95% 5% 5% 6%;
   border: none;
   padding: 50px 60px 20px 30px;
@@ -879,17 +912,17 @@ h1 {
 @keyframes headlineAnimation {
   0% {
     opacity: 0;
-    transform: translateY(-100vw);
+    transform: translateX(-100vw);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 @keyframes headlineAnimationRight {
   0% {
     opacity: 0;
-    transform: translateX(-100vw);
+    transform: translateX(100vw);
   }
   100% {
     opacity: 1;
@@ -989,6 +1022,15 @@ h1 {
     grid-template-columns: 1fr 2fr;
     justify-content: stretch;
   }
+}
+.dialog__item--grid ul li {
+  padding-top: 0.5rem;
+}
+.dialog__item--grid ul li:last-child {
+  padding-bottom: 1rem;
+}
+.dialog__item--grid ul li:first-child {
+  padding-top: 1rem;
 }
 .dialog__icon {
   width: 100px;

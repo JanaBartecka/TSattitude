@@ -51,3 +51,12 @@ function updateActiveMenuItem() {
   
   // Attach scroll event listener to the window object
   window.addEventListener('scroll', updateActiveMenuItem);
+
+  window.addEventListener('scroll',()=> {
+    if (window.scrollY > 100) {
+      MenuList.classList.add('menu__list--full')
+    } else {
+      MenuList.classList.remove('menu__list--full')
+    }
+  })
+

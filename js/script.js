@@ -68,22 +68,62 @@ window.addEventListener('scroll',() => {
     });
     
     //efekty na text
-    let test=document.querySelector('.test')
-    let nadpis=document.querySelector('h1')
-    if (window.pageYOffset+window.innerHeight>test.offsetTop) {
-        test.classList.add('animationRight')
-        nadpis.classList.add('animationLeft')
-    }
-})
+//     let test=document.querySelector('.test')
+//     let nadpis=document.querySelector('h1')
+//     if (window.pageYOffset+window.innerHeight>test.offsetTop) {
+//         test.classList.add('animationRight')
+//         nadpis.classList.add('animationLeft')
+//     }
+// })
 
 //loading page
 //window.onload=() => {
-    window.addEventListener('load',()=> {
+window.addEventListener('load',()=> {
+
+
+
     //po nacteni skryje loading page
     document.querySelector('.loading').classList.add('loading--hidden')
     document.querySelector('.loading').addEventListener('transitionend',()=> {
         document.querySelector('.loading').classList.add('loading--dispNone')
+        window.scrollTo({
+            top:0,
+            behavior:'smooth'
+        })
+
+        const AllAnimations=document.querySelectorAll('.AddAnimLeft')
+// console.log(AllAnimations);
+
+window.addEventListener('scroll',()=> {
+
+    AllAnimations.forEach((animation)=> {
+        // console.log(animation);
+        //     console.log(window.pageYOffset);
+        //     console.log(window.innerHeight);
+        //     console.log(animation.parentElement.offsetTop);
+            if (window.pageYOffset+window.innerHeight>animation.offsetTop) {
+                animation.classList.add('animationLeft')
+            }
     })
-    //spusti uvodni animaci+
+}), {once:true}
+
+const AllAnimationsRight=document.querySelectorAll('.AddAnimRight')
+// console.log(AllAnimationsRight);
+
+window.addEventListener('scroll',()=> {
+
+    AllAnimationsRight.forEach((animation)=> {
+        // console.log(animation);
+        //     console.log(window.pageYOffset);
+        //     console.log(window.innerHeight);
+        //     console.log(animation.parentElement.offsetTop);
+            if (window.pageYOffset+window.innerHeight>animation.offsetTop) {
+                animation.classList.add('animationRight')
+            }
+    })
+}), {once:true}
+
+    })
 })
-//}
+})
+

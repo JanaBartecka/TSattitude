@@ -127,6 +127,18 @@
             grid-template-columns: 1fr 2fr;
             justify-content: stretch;
         }
+
+        & ul li {
+            padding-top: v.$spacer-small;
+          }
+          
+          & ul li:last-child {
+            padding-bottom: v.$spacer-normal;
+          }
+          & ul li:first-child {
+            padding-top: v.$spacer-normal;
+          }
+          
     }
 
     // &__grid {
