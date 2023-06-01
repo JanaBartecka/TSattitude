@@ -1,0 +1,62 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.why {
+    
+    &:before {
+        content: '';
+        border-top: 1px solid transparent;
+        background: rgb(253,255,182);
+        background: radial-gradient(circle, rgba(253,255,182,1) 0%, rgba(253,255,182,0) 100%);
+        color: inherit;
+        display: block;
+        width: 50%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 1px;
+    }
+
+    &__headline {
+        padding-top: v.$spacer-big;
+        font-weight: 600;
+        text-align: center;
+
+
+    }
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1 1 33%;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        @media screen and (min-width:v.$minwidth-computer) {
+            max-width: v.$maxwidth;
+        }
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1 1 100%;
+        padding: v.$spacer-big v.$spacer-middle;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 300px;
+    }
+
+    &__img {
+        max-width: 100%;
+        fill: var(--textColor1);
+        stroke: var(--textColor2);
+    }
+
+    &__description {
+        font-weight: 300;
+        font-size: v.$spacer-middle;
+        text-align: center;
+    }
+}

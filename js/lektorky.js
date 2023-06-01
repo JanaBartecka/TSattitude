@@ -6,6 +6,12 @@ allLektorky.forEach((lektorka)=> {
         event.target.parentNode.childNodes[5].classList.toggle('lektorky__plus--active')
         event.target.parentNode.childNodes[7].classList.toggle('lektorky__description--active')
     })
+    lektorka.addEventListener('mouseover',()=>{
+        lektorka.firstElementChild.classList.toggle('lektorky__item--hover')
+    })
+    lektorka.addEventListener('mouseout',()=>{
+        lektorka.firstElementChild.classList.toggle('lektorky__item--hover')
+    })
 })
 
 

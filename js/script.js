@@ -45,8 +45,8 @@ bannerPicture.style.height=window.innerHeight + 'px'
 
 //counter
 window.addEventListener('scroll',() => {
-    const count=document.querySelector('.count')
-    const counters = document.querySelectorAll('.count');
+    // const countersDiv=document.querySelector('.counters')
+    const counters = document.querySelectorAll('.counters__item');
     const speed = 200;
     counters.forEach((counter) => {
         if (window.pageYOffset+window.innerHeight>counter.offsetTop) {
@@ -54,7 +54,12 @@ window.addEventListener('scroll',() => {
             const target = parseInt(counter.getAttribute('data-target'));
             const count = parseInt(counter.innerText);
             // const increment = Math.trunc(target / speed);
-            const increment =1
+            // if (target<=1000) {
+                 const increment = 1
+            // } else {
+            //     const increment = 5
+            // }
+            
 
             if (count < target) {
             counter.innerText = count + increment;
@@ -133,5 +138,18 @@ window.addEventListener('scroll',()=> {
 
     })
 
+})
+
+
+let CoverItem=document.querySelectorAll('.grid__item--cover')
+CoverItem.forEach((item)=> {
+    item.addEventListener('mouseover',()=>{
+        console.log(item);
+        item.nextElementSibling.classList.toggle('heading-frame--hover')
+    })
+    item.addEventListener('mouseleave',()=>{
+        console.log(item);
+        item.nextElementSibling.classList.toggle('heading-frame--hover')
+    })
 })
 

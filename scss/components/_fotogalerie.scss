@@ -63,11 +63,6 @@
       grid-template-rows: auto;
       column-gap: v.$spacer-middle;    
 
-      &__item:hover {
-          transform: scale(1.1);
-          transition: transform 0.5s;
-      }
-
       &__grid {
           max-width: v.$maxwidth;
       }

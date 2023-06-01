@@ -35,6 +35,12 @@
         cursor: pointer;
         max-height: 50px;
         max-width: 50px;
+        z-index: 3;
+
+        &:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in;
+        }
 
         &:last-of-type {
             margin-right: 100px;
@@ -213,12 +219,7 @@
         }
 
         &__icon {
-            z-index: 3;
 
-            &:hover {
-                transform: scale(1.1);
-                transition: transform 0.3s ease-in;
-            }
 
             &:last-of-type {
                 margin-right: 30px;

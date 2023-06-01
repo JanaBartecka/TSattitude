@@ -1,6 +1,57 @@
-.count {
-    font-size: 80px;
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.lineSection {
+  &::before {
+    content: '';
+    border-top: 1px solid transparent;
+    background: rgb(253,255,182);
+    background: radial-gradient(circle, rgba(253,255,182,1) 0%, rgba(253,255,182,0) 100%);
+    color: inherit;
+    display: block;
+    width: 50%;
+    height: 100%;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
+    padding-bottom: 1px;
+    justify-self: stretch;
+    margin-top: calc(2*v.$spacer-big);
+}
+}
+
+.counters {
+
+  margin: v.$spacer-big auto calc(2*v.$spacer-big) auto;
+  padding-top: v.$spacer-big;
+  max-width: calc(100vw - 1rem);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  flex: 1 1 calc(45%);
+  row-gap: v.$spacer-big;
+
+
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width:150px;
+    @media screen and (min-width:v.$minwidth-tablet) {
+      min-width:180px;
+    }
+  }
+
+    &__item {
+      font-size: 35px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+
+      @media screen and (min-width:v.$minwidth-tablet) {
+        font-size: 50px;
+      }
+    }
   }

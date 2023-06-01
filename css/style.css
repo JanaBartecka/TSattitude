@@ -149,10 +149,6 @@ a {
     width: calc(50vw - 4rem - 1.5rem - 2rem);
   }
 }
-.grid__item--cover:hover {
-  transform: rotate(5deg);
-  transition: transform 0.5s ease-out;
-}
 
 .loading {
   position: fixed;
@@ -253,6 +249,58 @@ a {
     transform: scale(1);
   }
 }
+.why:before {
+  content: "";
+  border-top: 1px solid transparent;
+  background: rgb(253, 255, 182);
+  background: radial-gradient(circle, rgb(253, 255, 182) 0%, rgba(253, 255, 182, 0) 100%);
+  color: inherit;
+  display: block;
+  width: 50%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1px;
+}
+.why__headline {
+  padding-top: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+.why__cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 33%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+@media screen and (min-width: 63rem) {
+  .why__cards {
+    max-width: 70rem;
+  }
+}
+.why__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 100%;
+  padding: 2rem 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 300px;
+}
+.why__img {
+  max-width: 100%;
+  fill: var(--textColor1);
+  stroke: var(--textColor2);
+}
+.why__description {
+  font-weight: 300;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
 .menu {
   min-height: 100px;
   max-height: 200px;
@@ -280,6 +328,11 @@ a {
   cursor: pointer;
   max-height: 50px;
   max-width: 50px;
+  z-index: 3;
+}
+.menu__icon:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in;
 }
 .menu__icon:last-of-type {
   margin-right: 100px;
@@ -418,13 +471,6 @@ a {
   .menu__item--active {
     background-color: var(--primaryColor);
   }
-  .menu__icon {
-    z-index: 3;
-  }
-  .menu__icon:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in;
-  }
   .menu__icon:last-of-type {
     margin-right: 30px;
   }
@@ -489,10 +535,6 @@ a {
     -moz-column-gap: 1.5rem;
          column-gap: 1.5rem;
   }
-  .fotogalerie__item:hover {
-    transform: scale(1.1);
-    transition: transform 0.5s;
-  }
   .fotogalerie__grid {
     max-width: 70rem;
   }
@@ -503,12 +545,7 @@ a {
   width: 300px;
   height: 250px;
   cursor: pointer;
-  transform: rotate(0);
-  transition: transform 0.5s ease-out;
-}
-.lektorky__lektorka:hover {
-  transform: rotate(5deg);
-  transition: transform 0.5s ease-out;
+  z-index: 2;
 }
 .lektorky__item {
   background-position: center bottom;
@@ -516,6 +553,8 @@ a {
   width: 100%;
   height: 100%;
   cursor: pointer;
+  transform: rotate(0deg);
+  transition: transform 0.5s ease-out;
 }
 .lektorky__item--1 {
   background-image: url(/images/lektorky/sykorova.PNG);
@@ -525,6 +564,10 @@ a {
 }
 .lektorky__item--active {
   filter: blur(4px);
+}
+.lektorky__item--hover {
+  transform: rotate(5deg);
+  transition: transform 0.5s ease-out;
 }
 .lektorky__name {
   text-transform: uppercase;
@@ -703,6 +746,8 @@ a {
   z-index: 2;
   width: calc(100vw - 2rem - 2rem);
   height: 300px;
+  transform: rotate(0deg);
+  transition: transform 0.5s ease-out;
 }
 @media screen and (min-width: 500px) {
   .heading-frame {
@@ -716,6 +761,10 @@ a {
 }
 .heading-frame__background {
   background-color: rgba(41, 36, 36, 0.5);
+}
+.heading-frame--hover {
+  transform: rotate(5deg);
+  transition: transform 0.5s ease-out;
 }
 
 .heading-frame__topRight {
@@ -859,11 +908,55 @@ a {
   mix-blend-mode: difference;
 }
 
-.count {
-  font-size: 80px;
+.lineSection::before {
+  content: "";
+  border-top: 1px solid transparent;
+  background: rgb(253, 255, 182);
+  background: radial-gradient(circle, rgb(253, 255, 182) 0%, rgba(253, 255, 182, 0) 100%);
+  color: inherit;
+  display: block;
+  width: 50%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1px;
+  justify-self: stretch;
+  margin-top: 4rem;
+}
+
+.counters {
+  margin: 2rem auto 4rem auto;
+  padding-top: 2rem;
+  max-width: calc(100vw - 1rem);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  flex: 1 1 45%;
+  row-gap: 2rem;
+}
+.counters__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 150px;
+}
+@media screen and (min-width: 42rem) {
+  .counters__card {
+    min-width: 180px;
+  }
+}
+.counters__item {
+  font-size: 35px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+@media screen and (min-width: 42rem) {
+  .counters__item {
+    font-size: 50px;
+  }
 }
 
 .animationLeft {
