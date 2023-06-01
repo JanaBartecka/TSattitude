@@ -18,10 +18,6 @@
         {% include 'partials/menu.njk' %}
     </header>
 
-    <!-- <section> -->
-        <!-- <h3 data-target="200" class="count">0</h3> -->
-        <!-- <h3 data-target="400" class="count">0</h3> -->
-    <!-- </section> -->
 <section class="section__1" id="onas">
     <div class="section__inner">
         <div class="mujramecek">
@@ -110,93 +106,14 @@
 </section>
 
 
-<section class="section__2" id="lekce">
-    <div class="section__inner">
-        <!-- <div class="mujramecek">
-            <div class="ramecek ramecek__color1 animationLeft">
-                <h1 class="animationLeft">LEKCE</h1>
-            </div>
-        </div> -->
-
-        <div class="mujramecek">
-            <div class="test AddAnimLeft">
-                <div class="test2">
-                
-                    <h1 class="nadpis"><span class="letter">L</span>EKCE</h1>
-                </div>
-            </div>
-        </div>
-
-
-    <div class="grid__cards grid__cards--lekce">
-        <div class="grid__item AddAnimLeft">
-            <div class="grid__item--cover dialog__button" id="dialog__openBtn--1"></div>
-            <div class="heading-frame lekce__background--1">
-                <div class="heading-frame__topRight"><span class="heading-frame__background">Pondělí 18-19 <br>6-8let</span></div>
-                <div class="heading-frame__bottomLeft"><span class="heading-frame__background">BABY SPORTIK</span></div>
-            </div>
-        </div>
-
-        <div class="grid__item AddAnimRight">
-            <div class="grid__item--cover dialog__button" id="dialog__openBtn--2"></div>
-            <div class="heading-frame lekce__background--1">
-                <div class="heading-frame__topRight"><span class="heading-frame__background">Pondělí 18-19 <br>6-8let</span></div>
-                <div class="heading-frame__bottomLeft"><span class="heading-frame__background">BABY SPORTIK</span></div>
-            </div>
-        </div>
-
-    </div>
-</div>
-</section>
+{% include 'partials/lekce.njk' %}
 
 {% include 'partials/dialogWindows.njk' %}
+{% include 'partials/lektori.njk' %}
 
-    <!-- <div class="obrazek--group">
-        <img class='obrazek' src="/images/banner1.PNG" alt="">
-        <div class="obrazek__click"></div>
-    </div> -->
-
-
-<section class="section__1" id="lektorky">
-    <div class="section__inner">
-        <div class="mujramecek">
-            <div class="ramecek ramecek__color2">
-                <h1 class="AddAnimLeft">LEKTORKY</h1>
-            </div>
-        </div>
-
-        <div class="grid__cards lektorky">
-            <div class="lektorky__lektorka AddAnimRight">
-                <div class="lektorky__item lektorky__item--1"></div>
-                <div class="lektorky__name">Lucie Sýkorová</div>
-                <div class="lektorky__plus">
-                    <span class="lektorky__plus--bar-H"></span>
-                    <span class="lektorky__plus--bar-V"></span>
-                </div>
-    
-                <div class="lektorky__description">
-                    lektorka 1
-                </div>
-            </div>
-
-            <div class="lektorky__lektorka AddAnimLeft">
-                <div class="lektorky__item lektorky__item--2 AddAnimRight"></div>
-                <div class="lektorky__name">Lucie Sýkorová</div>
-                <div class="lektorky__plus">
-                    <span class="lektorky__plus--bar-H"></span>
-                    <span class="lektorky__plus--bar-V"></span>
-                </div>
-    
-                <div class="lektorky__description">
-                    lektorka 2
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 {% include 'partials/fotogalerie.njk' %}
-
+{% include 'partials/sponsors.njk' %}
 {% include 'partials/kontakt.njk' %}
 
 {% include 'partials/footer.njk' %}

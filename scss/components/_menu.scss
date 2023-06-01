@@ -153,8 +153,8 @@
         border-radius: 30%;
         margin: 8px auto;
         transition: all 0.3s ease-in-out;
-        background: rgb(253,255,182);
-        background: radial-gradient(circle, rgba(253,255,182,1) 0%, rgba(64,64,64,1) 100%);
+        background: rgb(255, 255, 255);
+        background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgba(64,64,64,1) 100%);
         z-index: 4
         ;
     }
