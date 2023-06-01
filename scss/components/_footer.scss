@@ -1,6 +1,8 @@
 @use '../abstracts/variables' as v;
 
 .footer {
+    overflow: hidden;
+    
     &__copyright {
         display: block;
         text-decoration: none;

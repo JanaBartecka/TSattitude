@@ -1,149 +1,75 @@
 @use '../abstracts/variables' as v;
 
-.hello {
-    opacity: 1 !important;
+.fotogalerie {
+  max-width: calc(100vw - 2*v.$spacer-small);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3,minmax(200px,1fr));
+  row-gap: v.$spacer-middle;
+  margin: v.$spacer-middle auto 0 auto;
+
+  &__grid {
+      max-width: calc(100vw - 2*v.$spacer-small);
+
+      margin: v.$spacer-middle auto 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+      grid-auto-rows: minmax(100px,200px);
+      gap: 1rem;
+      grid-auto-flow: dense;
   }
-  .full {
-    position: fixed;
-    left: 0;
-    top: 0;
+
+  &__grid--wide {
+      grid-column: span 2;
+  }
+
+  &__grid--tall {
+      grid-row: span 2;
+  }
+
+  &__grid--big {
+      grid-row: span 2;
+      grid-column: span 2;
+  }
+
+  &__item {
     width: 100%;
     height: 100%;
-    z-index: 1;
-  }
-  .full .content {
-    background-color: rgba(0,0,0,0.75) !important;
-    height: 100%;
-    width: 100%;
-    display: grid;
-  }
-  .full .content img {
-    left: 50%;
-    transform: translate3d(0, 0, 0);
-    animation: zoomin 1s ease;
-    max-width: 100%;
-    max-height: 100%;
-    margin: auto;
-  }
-  .byebye {
-    opacity: 0;
-  }
-  .byebye:hover {
-    transform: scale(0.2) !important;
-  }
-  .gallery {
-    padding-top: v.$spacer-middle;
-    display: grid;
-    grid-column-gap: 8px;
-    grid-row-gap: 8px;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-auto-rows: 1fr;
-  }
-  .gallery img {
-    max-width: 100%;
-    //border-radius: 8px;
-    box-shadow: 0 0 16px #333;
-    transition: all 1.5s ease;
-  }
-  .gallery img:hover {
-    box-shadow: 0 0 32px #333;
-  }
-  .gallery .content {
-    padding: 4px;
-  }
-  .gallery .gallery-item {
-    transition: grid-row-start 300ms linear;
-    transition: transform 300ms ease;
-    transition: all 0.5s ease;
-    cursor: pointer;
-  }
-  .gallery .gallery-item:hover {
-    transform: scale(1.025);
-  }
-  @media (max-width: 600px) {
-    .gallery {
-      grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      &:hover {
+        transform: scale(1.1);
+        filter: grayscale(100%);
+        transition: transform 0.3s,filter 0.3s;
+      }
     }
   }
-  @media (max-width: 400px) {
-    .gallery {
-      grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
-    }
+
+  @media screen and (min-width:v.$minwidth-tablet) {
+      grid-template-columns: repeat(4,1fr);
+      grid-template-rows: repeat(2,auto);
+      column-gap: v.$spacer-middle;    
+
   }
-  @-moz-keyframes zoomin {
-    0% {
-      max-width: 50%;
-      transform: rotate(-30deg);
-      filter: blur(4px);
-    }
-    30% {
-      filter: blur(4px);
-      transform: rotate(-80deg);
-    }
-    70% {
-      max-width: 50%;
-      transform: rotate(45deg);
-    }
-    100% {
-      max-width: 100%;
-      transform: rotate(0deg);
-    }
+
+  @media screen and (min-width:v.$minwidth-computer) {
+      max-width: v.$maxwidth;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows: auto;
+      column-gap: v.$spacer-middle;    
+
+      &__item:hover {
+          transform: scale(1.1);
+          transition: transform 0.5s;
+      }
+
+      &__grid {
+          max-width: v.$maxwidth;
+      }
   }
-  @-webkit-keyframes zoomin {
-    0% {
-      max-width: 50%;
-      transform: rotate(-30deg);
-      filter: blur(4px);
-    }
-    30% {
-      filter: blur(4px);
-      transform: rotate(-80deg);
-    }
-    70% {
-      max-width: 50%;
-      transform: rotate(45deg);
-    }
-    100% {
-      max-width: 100%;
-      transform: rotate(0deg);
-    }
-  }
-  @-o-keyframes zoomin {
-    0% {
-      max-width: 50%;
-      transform: rotate(-30deg);
-      filter: blur(4px);
-    }
-    30% {
-      filter: blur(4px);
-      transform: rotate(-80deg);
-    }
-    70% {
-      max-width: 50%;
-      transform: rotate(45deg);
-    }
-    100% {
-      max-width: 100%;
-      transform: rotate(0deg);
-    }
-  }
-  @keyframes zoomin {
-    0% {
-      max-width: 50%;
-      transform: rotate(-30deg);
-      filter: blur(4px);
-    }
-    30% {
-      filter: blur(4px);
-      transform: rotate(-80deg);
-    }
-    70% {
-      max-width: 50%;
-      transform: rotate(45deg);
-    }
-    100% {
-      max-width: 100%;
-      transform: rotate(0deg);
-    }
-  }
-  
+}
