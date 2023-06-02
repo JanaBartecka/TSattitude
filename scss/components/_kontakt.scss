@@ -5,7 +5,7 @@
     display: grid;
     grid-template-columns: 1fr;
     //grid-template-rows: repeat(3,auto);
-    gap: v.$spacer-big;
+    gap: v.$spacer-middle;
     //@include m.zarovnani;
     padding-top: v.$spacer-big;
 
@@ -49,6 +49,14 @@
         display: flex;
         flex: 1 1 100%;
         flex-direction: row;
+    }
+
+    &__item + .contact__item {
+        padding-bottom: v.$spacer-big;
+    }
+
+    &__adress {
+        padding-bottom: 0 !important;
     }
 
     &__map {

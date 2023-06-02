@@ -706,7 +706,7 @@ a {
 .contact {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 1.5rem;
   padding-top: 2rem;
 }
 .contact--hover:hover {
@@ -740,6 +740,12 @@ a {
   display: flex;
   flex: 1 1 100%;
   flex-direction: row;
+}
+.contact__item + .contact__item {
+  padding-bottom: 2rem;
+}
+.contact__adress {
+  padding-bottom: 0 !important;
 }
 .contact__map {
   width: 100%;
@@ -864,7 +870,7 @@ a {
 .heading-frame__bottomLeft {
   font-family: "Pragati Narrow", sans-serif;
   font-size: 1.5rem;
-  max-width: 150px;
+  width: 100%;
   text-align: left;
   display: grid;
   gap: 10px;
@@ -1201,6 +1207,10 @@ a {
 .fotoBaner img {
   height: 100%;
   display: inline-block;
+}
+.fotoBaner--translateY {
+  transform: translateX(-80px);
+  width: calc(100% + 80px);
 }
 
 .fotoBaner2 {
