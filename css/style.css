@@ -121,6 +121,7 @@ a {
   width: calc(100vw - 2rem - 2rem);
   height: 300px;
   overflow: hidden;
+  max-width: 500px;
 }
 @media screen and (min-width: 500px) {
   .grid__item {
@@ -139,6 +140,7 @@ a {
   top: 0;
   left: 0;
   z-index: 3;
+  max-width: 500px;
 }
 @media screen and (min-width: 500px) {
   .grid__item--cover {
@@ -313,22 +315,15 @@ a {
   position: absolute;
   top: 0;
   right: 0;
+  max-width: 100%;
 }
 .menu__background {
   width: 100vw;
 }
-.menu__logo {
-  font-size: 2rem;
-}
-.menu__logo img {
-  width: 100px;
-  border-radius: 15px;
-  padding-top: 10px;
-}
 .menu__icon {
   cursor: pointer;
-  max-height: 50px;
-  max-width: 50px;
+  height: 50px;
+  width: 50px;
   z-index: 3;
 }
 .menu__icon:hover {
@@ -338,10 +333,15 @@ a {
 .menu__icon:last-of-type {
   margin-right: 100px;
 }
-.menu__icon img {
+.menu__icon svg {
   max-width: 100%;
-  background-color: rgba(255, 255, 255, 0);
+  max-height: 100%;
   color: white;
+  fill: var(--textColor1);
+}
+.menu__icon--full {
+  margin-right: 0px;
+  margin-top: 180px;
 }
 .menu__list {
   display: none;
@@ -635,6 +635,39 @@ a {
 .lekce__background--1 {
   background: #333 url(/images/lekce/baby_sportik.PNG) center;
 }
+.lekce__background--2 {
+  background: #333 url(/images/lekce/babyDance.jpg) center;
+}
+.lekce__background--3 {
+  background: #333 url(/images/lekce/breakDance.jpg) center;
+}
+.lekce__background--4 {
+  background: #333 url(/images/lekce/contemporary.jpg) center;
+}
+.lekce__background--5 {
+  background: #333 url(/images/lekce/deti.jpg) center;
+}
+.lekce__background--6 {
+  background: #333 url(/images/lekce/detiA.jpg) center;
+}
+.lekce__background--7 {
+  background: #333 url(/images/lekce/HlavniVekovaKategorieA.jpg) center;
+}
+.lekce__background--8 {
+  background: #333 url(/images/lekce/Jaromer.jpg) center;
+}
+.lekce__background--9 {
+  background: #333 url(/images/lekce/jogaVsiti.jpg) center;
+}
+.lekce__background--10 {
+  background: #333 url(/images/lekce/junioriB.jpg) center;
+}
+.lekce__background--11 {
+  background: #333 url(/images/lekce/juniorkyA.jpg) center;
+}
+.lekce__background--12 {
+  background: #333 url(/images/lekce/mini-deti.jpg) center;
+}
 
 .sponsors {
   max-width: calc(100vw - 1rem);
@@ -689,6 +722,10 @@ a {
   gap: 2rem;
   padding-top: 2rem;
 }
+.contact--hover:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
 .contact__title {
   width: 60px;
   height: 30px;
@@ -706,6 +743,7 @@ a {
   width: 100%;
   height: 100%;
   fill: var(--textColor1);
+  stroke: var(--textColor2);
 }
 .contact__info {
   align-self: center;
@@ -724,15 +762,6 @@ a {
   font-weight: 600;
   text-decoration: none;
 }
-.contact__link:link {
-  color: var(--buttonColor);
-}
-.contact__link:visited {
-  color: var(--textColo) r;
-}
-.contact__link:hover {
-  color: var(--tertiaryColor);
-}
 .contact__link:after {
   content: "";
   display: inline-block;
@@ -750,11 +779,9 @@ a {
     grid-template-rows: auto;
   }
   .contact__map {
-    grid-row: 3/4;
     grid-column: 1/3;
   }
   .contact__adress {
-    grid-row: 2/3;
     grid-column: 1/3;
   }
 }
@@ -790,6 +817,7 @@ a {
   grid-template-rows: max-content auto max-content;
   background-size: cover;
   color: var(--primaryColor);
+  max-width: 500px;
   padding: 2rem;
   z-index: 2;
   width: calc(100vw - 2rem - 2rem);
@@ -829,7 +857,7 @@ a {
   display: block;
   width: 100%;
   height: 100%;
-  border: 2px solid black;
+  border: 2px solid white;
   border-right: none;
   border-bottom: none;
 }
@@ -839,7 +867,7 @@ a {
   display: block;
   width: 100%;
   height: 100%;
-  border: 2px solid black;
+  border: 2px solid white;
   grid-column: 1;
   grid-row: 2/3;
   border-bottom: 0;
@@ -861,7 +889,7 @@ a {
   display: block;
   width: 100%;
   height: 100%;
-  border: 2px solid black;
+  border: 2px solid white;
   border-left: none;
   border-top: none;
 }
@@ -879,7 +907,7 @@ a {
   background: var(--c) padding-box;
   background-color: inherit;
   color: inherit;
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 400;
 }
 .ramecek__color1 {
@@ -889,6 +917,21 @@ a {
 .ramecek__color2 {
   color: var(--textColor2);
   background-color: var(--backgroundColor2);
+}
+@media screen and (min-width: 22rem) {
+  .ramecek {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 25rem) {
+  .ramecek {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 28rem) {
+  .ramecek {
+    font-size: 2rem;
+  }
 }
 .ramecek::before {
   position: absolute;

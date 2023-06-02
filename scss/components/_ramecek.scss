@@ -23,8 +23,20 @@
     background: var(--c) padding-box;
     background-color: inherit;
     color: inherit;
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: 400;
+
+    @media screen and (min-width:22rem) {
+      font-size: 1.6rem;
+    }
+
+    @media screen and (min-width:25rem) {
+      font-size: 1.8rem;
+    }
+
+    @media screen and (min-width:28rem) {
+      font-size: 2rem;
+    }
       
     &::before {
     position: absolute;
