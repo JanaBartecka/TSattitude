@@ -61,7 +61,7 @@
         width: 30px;
         background-color: transparent;
         border-radius: 50%;
-        border: solid 3px var(--primaryColor);
+        border: solid 2px var(--primaryColor);
 
         &--active {
             display: none;
@@ -71,7 +71,7 @@
             //display: block;
             position: absolute;
             width: 15px;
-            height: 2px;
+            height: 1px;
             background-color: white;
             
         }
@@ -83,8 +83,8 @@
 
         &--bar-V {
             transform: rotate(90deg);
-            margin-top: 13px;
-            margin-left: 5px;
+            margin-top: 12.5px;
+            margin-left: 5.5px;
         }
     }
 
