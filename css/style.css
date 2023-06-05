@@ -1,6 +1,6 @@
 :root {
   --primaryColor:#ffffff;
-  --secondaryColor:#FFCAD4;
+  --secondaryColor:#fcf633;
   --tertiaryColor:#688B58;
   --buttonColor:#E2D686;
   --textColor1:var(--primaryColor);
@@ -60,6 +60,10 @@ a {
   text-decoration: none;
   font-weight: 600;
   color: inherit;
+}
+
+a:hover {
+  transform: scale(1.1);
 }
 
 .section__inner {
@@ -380,7 +384,7 @@ a {
 }
 .menu__link:hover {
   background-color: var(--secondaryColor);
-  color: var(--lightColor);
+  color: black;
 }
 .menu__item {
   text-align: center;
@@ -1093,12 +1097,12 @@ a {
   height: 40px;
   text-align: center;
   line-height: 40px;
-  color: var(--primaryColor);
+  color: black;
   font-size: 40px;
   cursor: pointer;
   border-radius: 50%;
   background-color: var(--secondaryColor);
-  border: 0.5px solid grey;
+  border: none;
 }
 .dialog.active {
   display: block;

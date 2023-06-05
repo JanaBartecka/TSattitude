@@ -50,12 +50,12 @@
         height: 40px;
         text-align: center;
         line-height: 40px;
-        color: var(--primaryColor);
+        color: black;
         font-size: 40px;
         cursor: pointer;
         border-radius: 50%;
         background-color: var(--secondaryColor);
-        border: 0.5px solid grey;
+        border: none;
     }
 
     &.active {
