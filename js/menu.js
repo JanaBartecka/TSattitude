@@ -59,7 +59,7 @@ function updateActiveMenuItem() {
   const DefaultFontSizeValue=DefaultFontSize.split('px');
   //resize menu list to fit along with menu__icon
   window.addEventListener('scroll',()=> {
-    if (window.innerWidth>DefaultFontSizeValue[0]*73.5) {
+    if (window.innerWidth>DefaultFontSizeValue[0]*86) {
       if (window.scrollY > 100) {
         MenuList.classList.add('menu__list--full')
         MenuIcons.forEach((icon)=> {
@@ -75,7 +75,7 @@ function updateActiveMenuItem() {
   })
 
   window.addEventListener('resize', ()=> {
-    if (window.innerWidth>DefaultFontSizeValue[0]*73.5) {
+    if (window.innerWidth>DefaultFontSizeValue[0]*86) {
       MenuIcons.forEach((icon)=> {
         icon.classList.add('menu__icon--full')
       })

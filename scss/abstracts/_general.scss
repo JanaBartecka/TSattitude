@@ -35,7 +35,7 @@
         }
 
         &--lekce {
-            
+            padding-bottom: v.$spacer-big;
             @media screen and (min-width:v.$minwidth-tablet-lekce) {
                 grid-template-columns: repeat(2,minmax(300px,10fr));
             }

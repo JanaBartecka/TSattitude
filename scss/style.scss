@@ -5,11 +5,13 @@
 
 @use 'components/loading';
 @use 'components/header';
+@use 'components/aktualne';
 @use 'components/onas';
 @use 'components/menu';
 @use 'components/fotogalerie';
 @use 'components/lektorky';
 @use 'components/lekce';
+@use 'components/coNabizime';
 @use 'components/sponsors';
 @use 'components/kontakt';
 @use 'components/footer';
@@ -20,3 +22,6 @@
 @use 'components/animation';
 @use 'components/dialogWindow';
 @use 'components/fotoBaner';
+@use 'components/contactForm';
+
+

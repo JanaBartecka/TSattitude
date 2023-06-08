@@ -1,52 +1,78 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
 
 .lekce {
     &__background {
         &--1 {
-            background: #333 url(/images/lekce/baby_sportik.PNG) center;
+            background: #333 url(/images/lekce/SPORTOVNI-SPORTIK.jpg) center;
         }
 
         &--2 {
-            background: #333 url(/images/lekce/babyDance.jpg) center;
+            background: #333 url(/images/lekce/SPORTOVNI-SPORTAK.jpg) center;
         }
 
         &--3 {
-            background: #333 url(/images/lekce/breakDance.jpg) center;
+            background: #333 url(/images/lekce/PROZABAVU-STREETDANCEBABY.jpg) center;
         }
 
         &--4 {
-            background: #333 url(/images/lekce/contemporary.jpg) center;
+            background: #333 url(/images/lekce/PROZABAVU-STREETDANCEMINIDETIADETI.jpg) center;
         }
 
         &--5 {
-            background: #333 url(/images/lekce/deti.jpg) center;
+            background: #333 url(/images/lekce/PROZABAVU-MAMIATATIGANG.jpg) center;
         }
 
         &--6 {
-            background: #333 url(/images/lekce/detiA.jpg) center;
+            background: #333 url(/images/lekce/baby_sportik.PNG) center;
         }
 
         &--7 {
-            background: #333 url(/images/lekce/HlavniVekovaKategorieA.jpg) center;
+            background: #333 url(/images/lekce/PROZABAVU-POLEDANCEVZDUSNAAKROBACIE.jpg) center;
         }
 
         &--8 {
-            background: #333 url(/images/lekce/Jaromer.jpg) center;
+            background: #333 url(/images/lekce/PROZABAVU-JOGAVSITI.jpg) center;
         }
 
         &--9 {
-            background: #333 url(/images/lekce/jogaVsiti.jpg) center;
+            background: #333 url(/images/lekce/ZACHOBBY-MINIDETI.jpg) center;
         }
 
         &--10 {
-            background: #333 url(/images/lekce/junioriB.jpg) center;
+            background: #333 url(/images/lekce/baby_sportik.PNG) center;
         }
 
         &--11 {
-            background: #333 url(/images/lekce/juniorkyA.jpg) center;
+            background: #333 url(/images/lekce/baby_sportik.PNG) center;
         }
 
         &--12 {
-            background: #333 url(/images/lekce/mini-deti.jpg) center;
+            background: #333 url(/images/lekce/STREETDANCEZAAHOBBY-DOSPELI.jpg) center;
         }
+
+        &--13 {
+            background: #333 url(/images/lekce/STREETDANCEVYBEROVE-DETI.jpg) center;
+        }
+
+        &--14 {
+            background: #333 url(/images/lekce/STREETDANCEBASIC-VYBEROVE-JUNIORI.jpg) center;
+        }
+
+        &--15 {
+            background: #333 url(/images/lekce/STREETDANCEVYBEROVE-DOSPELI.jpg) center;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+
+    }
+
+    &__description {
+        text-align: center;
+        padding-top: v.$spacer-normal;
     }
 }

@@ -1,8 +1,9 @@
 :root {
     //--primaryColor:#fdffb6;
     --primaryColor:#ffffff;
-    --secondaryColor:#fcf633;
-    --tertiaryColor:#688B58;
+    //--secondaryColor:#fcf633;
+    --secondaryColor:#00fcf8;
+    --tertiaryColor:#191919;
     --buttonColor:#E2D686;
     --textColor1:var(--primaryColor);
     --textColor2:var(--backgroundColor1);
@@ -43,7 +44,7 @@ $radius:10px;
 $minwidth-tablet:42rem;
 $minwidth-tablet-lekce:50rem;
 $minwidth-computer:63rem;
-$minwidth-computer-menu:73.5rem;
+$minwidth-computer-menu:86rem;
 $minwidth-singleAkce:50rem;
 $maxwidth:70rem;
 

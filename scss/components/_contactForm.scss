@@ -1,0 +1,153 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.contactForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: v.$spacer-big 0;
+}
+
+.box {
+    width: 100%;
+    padding: v.$spacer-small;
+    //transform: translate(-50%,-50%);
+    background: var(--tertiaryColor);
+    text-align: center;  
+    display: block;
+    @media screen and (min-width:v.$minwidth-tablet) {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-template-areas: 
+            'formTitle formTitle'
+            'form-email form-textarea'
+            'form-text form-textarea'
+            'form-label form-textarea'
+            'form-select form-textarea'
+            '. form-submit'
+            'form-description form-description';
+
+        .box input[type="text"] {
+            grid-area: form-text;
+        }
+
+        textarea {
+            grid-area: form-textarea;
+        }
+
+        h1 {
+            grid-area: formTitle;
+        }
+
+        .box input[type="email"] {
+            grid-area: form-email;
+        }
+
+        label {
+            grid-area: form-label;
+        }
+    }
+}
+
+
+
+.box input[type="text"], .box input[type="email"], textarea{
+    background: var(--tertiaryColor);
+    //display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid inherit;
+    padding: 15px 10px;
+    width: 90%;
+    color: #bbb;
+    //border-radius: 24px;
+    outline: none;
+}
+
+.box input[type="text"]:focus, .box input[type="email"]:focus, textarea:focus, .box select:focus {
+    transition: 0.25s;
+    width: 100%;
+    border-color: var(--secondaryColor);
+    // @media screen and (min-width:350px) {
+    //     width: 280px;
+    // }
+}
+
+.box input[type="submit"] {
+    background: none;
+    //display: block;
+    margin: 0px auto;
+    text-align: center;
+    border: 2px solid var(--secondaryColor);
+    padding: 14px 40px;
+    width: 200px;
+    outline: none;
+    color: #fff;
+    text-transform: uppercase;
+    //border-radius: 24px;
+    cursor: pointer;
+    grid-area: form-submit;
+}
+
+.box input[type="submit"]:hover {
+    transition: 0.25s;
+    background: var(--secondaryColor);
+    color: var(--tertiaryColor);
+    font-weight: 500;
+}
+
+
+.box h1 {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.box input[type="text"], .box input[type="email"], textarea, .box select{
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid var(--secondaryColor);
+    padding: 15px 10px;
+    width: 90%;
+    color: #bbb;
+    font-family: 'Raleway', sans-serif;
+    //border-radius: 24px;
+    transition: 0.25s;
+}
+
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid var(--secondaryColor);
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px var(--tertiaryColor) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.box select {
+    background-color: var(--tertiaryColor);
+    // line-height: 30px;
+    // height: 30px;
+    // margin: 0 5px 5px 0;
+    grid-area: form-select;
+}
+
+form p {
+    padding-top: v.$spacer-middle;
+    padding-bottom: v.$spacer-middle;
+    text-align: center;
+    grid-area: form-description;
+}
+
+form h1 {
+    padding-top: v.$spacer-normal;
+}

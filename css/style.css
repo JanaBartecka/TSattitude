@@ -1,7 +1,7 @@
 :root {
   --primaryColor:#ffffff;
-  --secondaryColor:#fcf633;
-  --tertiaryColor:#688B58;
+  --secondaryColor:#00fcf8;
+  --tertiaryColor:#191919;
   --buttonColor:#E2D686;
   --textColor1:var(--primaryColor);
   --textColor2:var(--backgroundColor1);
@@ -42,10 +42,6 @@ p {
   font-weight: 400;
   line-height: 1.5;
   text-align: left;
-}
-
-p:first-of-type {
-  padding-top: 1.5rem;
 }
 
 h1, h2, h3 {
@@ -114,6 +110,9 @@ a:hover {
     max-width: 70rem;
   }
 }
+.grid__cards--lekce {
+  padding-bottom: 2rem;
+}
 @media screen and (min-width: 50rem) {
   .grid__cards--lekce {
     grid-template-columns: repeat(2, minmax(300px, 10fr));
@@ -163,7 +162,7 @@ a:hover {
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: var(--backgroundColor1);
+  background-color: var(--tertiaryColor);
   z-index: 100;
   display: flex;
   align-items: center;
@@ -196,7 +195,7 @@ a:hover {
   }
 }
 .header {
-  background-image: url(/images/banner1.PNG);
+  background-image: url(/images/junioriB.jpg);
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -234,7 +233,7 @@ a:hover {
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
   color: var(--primaryColor);
-  font-size: 60px;
+  font-size: 50px;
   font-family: "Dancing Script", cursive;
   z-index: 2;
 }
@@ -256,6 +255,53 @@ a:hover {
     transform: scale(1);
   }
 }
+@media screen and (min-width: 42rem) {
+  .aktualne {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 42rem) {
+  .aktualne__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+  }
+}
+@media screen and (max-width: 42rem) {
+  .aktualne__item + .aktualne__item {
+    padding-top: 2rem;
+  }
+  .aktualne__item + .aktualne__item:before {
+    content: "";
+    border-top: 1px solid transparent;
+    background: rgb(0, 0, 0);
+    background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+    color: inherit;
+    display: block;
+    width: 50%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1px;
+    margin-bottom: 2rem;
+  }
+}
+.aktualne__title {
+  text-align: center;
+  height: 4rem;
+}
+.aktualne__date {
+  text-align: center;
+  height: 2rem;
+}
+.aktualne__img {
+  width: 100%;
+  padding-top: 1.5rem;
+}
+
 .why:before {
   content: "";
   border-top: 1px solid transparent;
@@ -273,10 +319,12 @@ a:hover {
   padding-top: 2rem;
   font-weight: 600;
   text-align: center;
+  padding-top: 1rem;
 }
 .why__cards {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   flex: 1 1 33%;
   margin-left: auto;
   margin-right: auto;
@@ -295,10 +343,12 @@ a:hover {
   padding: 2rem 1.5rem;
   margin-left: auto;
   margin-right: auto;
-  max-width: 300px;
+  max-width: 350px;
+  min-width: 250px;
 }
 .why__img {
   max-width: 100%;
+  height: 100px;
   fill: var(--textColor1);
   stroke: var(--textColor2);
 }
@@ -306,6 +356,7 @@ a:hover {
   font-weight: 300;
   font-size: 1.5rem;
   text-align: center;
+  padding-top: 1rem;
 }
 
 .menu {
@@ -345,7 +396,7 @@ a:hover {
 }
 .menu__icon--full {
   margin-right: 0px;
-  margin-top: 180px;
+  margin-top: 250px;
 }
 .menu__list {
   display: none;
@@ -354,7 +405,7 @@ a:hover {
   align-items: center;
   list-style: none;
   font-size: 1.2rem;
-  background-color: var(--backgroundColor2);
+  background-color: var(--tertiaryColor);
   padding: 0;
   position: fixed;
   gap: 0;
@@ -363,7 +414,7 @@ a:hover {
   height: 100vh;
   text-align: center;
   transition: opacity 1s ease-in;
-  color: var(--textColor);
+  color: var(--textColor2);
   opacity: 0;
 }
 .menu__list.menu__active {
@@ -376,7 +427,7 @@ a:hover {
   display: block;
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--textColor2);
+  color: var(--textColor1);
   padding: 1rem;
   font-weight: 600;
   padding: 1.5rem 1.5rem;
@@ -432,11 +483,11 @@ a:hover {
   background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(64, 64, 64) 100%);
   z-index: 4;
 }
-@media screen and (min-width: 73.5rem) {
+@media screen and (min-width: 86rem) {
   .menu__list {
     display: flex;
     flex-direction: row;
-    max-width: calc(100% - 250px);
+    max-width: 100%;
     justify-content: flex-start;
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.6);
@@ -446,7 +497,7 @@ a:hover {
     height: max-content;
     min-height: 100px;
     max-height: 200px;
-    right: 250px;
+    right: 0px;
   }
   .menu__list--full {
     max-width: 100%;
@@ -559,12 +610,16 @@ a:hover {
   width: 100%;
   height: 100%;
   cursor: pointer;
+  background-color: white;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .lektorky__item--1 {
-  background-image: url(/images/lektorky/sykorova.PNG);
+  background-image: url(/images/lektorky/lektorka.png);
 }
 .lektorky__item--2 {
-  background-image: url(/images/lektorky/sykorova.PNG);
+  background-image: url(/images/lektorky/postavy2.png);
 }
 .lektorky__item--active {
   filter: blur(4px);
@@ -584,6 +639,8 @@ a:hover {
   text-align: center;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 .lektorky__name--active {
   display: none;
@@ -595,7 +652,7 @@ a:hover {
   transform: translateX(-50%);
   height: 30px;
   width: 30px;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   border: solid 2px var(--primaryColor);
 }
@@ -637,40 +694,62 @@ a:hover {
 }
 
 .lekce__background--1 {
-  background: #333 url(/images/lekce/baby_sportik.PNG) center;
+  background: #333 url(/images/lekce/SPORTOVNI-SPORTIK.jpg) center;
 }
 .lekce__background--2 {
-  background: #333 url(/images/lekce/babyDance.jpg) center;
+  background: #333 url(/images/lekce/SPORTOVNI-SPORTAK.jpg) center;
 }
 .lekce__background--3 {
-  background: #333 url(/images/lekce/breakDance.jpg) center;
+  background: #333 url(/images/lekce/PROZABAVU-STREETDANCEBABY.jpg) center;
 }
 .lekce__background--4 {
-  background: #333 url(/images/lekce/contemporary.jpg) center;
+  background: #333 url(/images/lekce/PROZABAVU-STREETDANCEMINIDETIADETI.jpg) center;
 }
 .lekce__background--5 {
-  background: #333 url(/images/lekce/deti.jpg) center;
+  background: #333 url(/images/lekce/PROZABAVU-MAMIATATIGANG.jpg) center;
 }
 .lekce__background--6 {
-  background: #333 url(/images/lekce/detiA.jpg) center;
+  background: #333 url(/images/lekce/baby_sportik.PNG) center;
 }
 .lekce__background--7 {
-  background: #333 url(/images/lekce/HlavniVekovaKategorieA.jpg) center;
+  background: #333 url(/images/lekce/PROZABAVU-POLEDANCEVZDUSNAAKROBACIE.jpg) center;
 }
 .lekce__background--8 {
-  background: #333 url(/images/lekce/Jaromer.jpg) center;
+  background: #333 url(/images/lekce/PROZABAVU-JOGAVSITI.jpg) center;
 }
 .lekce__background--9 {
-  background: #333 url(/images/lekce/jogaVsiti.jpg) center;
+  background: #333 url(/images/lekce/ZACHOBBY-MINIDETI.jpg) center;
 }
 .lekce__background--10 {
-  background: #333 url(/images/lekce/junioriB.jpg) center;
+  background: #333 url(/images/lekce/baby_sportik.PNG) center;
 }
 .lekce__background--11 {
-  background: #333 url(/images/lekce/juniorkyA.jpg) center;
+  background: #333 url(/images/lekce/baby_sportik.PNG) center;
 }
 .lekce__background--12 {
-  background: #333 url(/images/lekce/mini-deti.jpg) center;
+  background: #333 url(/images/lekce/STREETDANCEZAAHOBBY-DOSPELI.jpg) center;
+}
+.lekce__background--13 {
+  background: #333 url(/images/lekce/STREETDANCEVYBEROVE-DETI.jpg) center;
+}
+.lekce__background--14 {
+  background: #333 url(/images/lekce/STREETDANCEBASIC-VYBEROVE-JUNIORI.jpg) center;
+}
+.lekce__background--15 {
+  background: #333 url(/images/lekce/STREETDANCEVYBEROVE-DOSPELI.jpg) center;
+}
+.lekce__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+.lekce__description {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.coNabizime__title {
+  padding: 2rem 0 1rem 0;
 }
 
 .sponsors {
@@ -747,6 +826,12 @@ a:hover {
 }
 .contact__item + .contact__item {
   padding-bottom: 2rem;
+}
+@media screen and (min-width: 42rem) {
+  .contact__item + .contact__item {
+    padding-bottom: 0;
+    gap: 2rem;
+  }
 }
 .contact__adress {
   padding-bottom: 0 !important;
@@ -900,7 +985,7 @@ a:hover {
   height: 2em;
   border: solid 0 transparent;
   border-width: 0 -5px 2px 0;
-  padding: 10px 0.5em 0.5em 20px;
+  padding: 10px 1em 1em 20px;
   background: var(--c) padding-box;
   background-color: inherit;
   color: inherit;
@@ -939,16 +1024,15 @@ a:hover {
   border-width: 5px 2px 0 5px;
   width: 100%;
   height: 2em;
-  mix-blend-mode: difference;
   pointer-events: none;
   box-sizing: content-box;
   content: "";
 }
 .ramecek.ramecek__color1::before {
-  box-shadow: inset 0 0 0 1px var(--backgroundColor2);
+  box-shadow: inset 0 0 0 1px var(--secondaryColor);
 }
 .ramecek.ramecek__color2::before {
-  box-shadow: inset 0 0 0 1px var(--backgroundColor2);
+  box-shadow: inset 0 0 0 1px var(--secondaryColor);
 }
 
 .mujramecek {
@@ -957,28 +1041,6 @@ a:hover {
   justify-content: center;
   padding-top: 2rem;
   padding-bottom: 3rem;
-}
-
-.test {
-  width: -moz-max-content;
-  width: max-content;
-  height: -moz-max-content;
-  height: max-content;
-  background-color: var(--backgroundColor1);
-  border-radius: 95% 5% 5% 6%;
-  border: none;
-  padding: 50px 60px 20px 30px;
-  position: relative;
-}
-
-.test2 {
-  position: absolute;
-  left: 18px;
-  padding-left: 10px;
-  top: 15px;
-  width: -moz-max-content;
-  width: max-content;
-  mix-blend-mode: difference;
 }
 
 .lineSection::before {
@@ -1020,14 +1082,14 @@ a:hover {
     min-width: 180px;
   }
 }
-.counters__item {
+.counters h3 {
   font-size: 35px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
 @media screen and (min-width: 42rem) {
-  .counters__item {
+  .counters h3 {
     font-size: 50px;
   }
 }
@@ -1230,4 +1292,131 @@ a:hover {
   display: inline-block;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.contactForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.box {
+  width: 100%;
+  padding: 0.5rem;
+  background: var(--tertiaryColor);
+  text-align: center;
+  display: block;
+}
+@media screen and (min-width: 42rem) {
+  .box {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas: "formTitle formTitle" "form-email form-textarea" "form-text form-textarea" "form-label form-textarea" "form-select form-textarea" ". form-submit" "form-description form-description";
+  }
+  .box .box input[type=text] {
+    grid-area: form-text;
+  }
+  .box textarea {
+    grid-area: form-textarea;
+  }
+  .box h1 {
+    grid-area: formTitle;
+  }
+  .box .box input[type=email] {
+    grid-area: form-email;
+  }
+  .box label {
+    grid-area: form-label;
+  }
+}
+
+.box input[type=text], .box input[type=email], textarea {
+  background: var(--tertiaryColor);
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid inherit;
+  padding: 15px 10px;
+  width: 90%;
+  color: #bbb;
+  outline: none;
+}
+
+.box input[type=text]:focus, .box input[type=email]:focus, textarea:focus, .box select:focus {
+  transition: 0.25s;
+  width: 100%;
+  border-color: var(--secondaryColor);
+}
+
+.box input[type=submit] {
+  background: none;
+  margin: 0px auto;
+  text-align: center;
+  border: 2px solid var(--secondaryColor);
+  padding: 14px 40px;
+  width: 200px;
+  outline: none;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  grid-area: form-submit;
+}
+
+.box input[type=submit]:hover {
+  transition: 0.25s;
+  background: var(--secondaryColor);
+  color: var(--tertiaryColor);
+  font-weight: 500;
+}
+
+.box h1 {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.box input[type=text], .box input[type=email], textarea, .box select {
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid var(--secondaryColor);
+  padding: 15px 10px;
+  width: 90%;
+  color: #bbb;
+  font-family: "Raleway", sans-serif;
+  transition: 0.25s;
+}
+
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid var(--secondaryColor);
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px var(--tertiaryColor) inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.box select {
+  background-color: var(--tertiaryColor);
+  grid-area: form-select;
+}
+
+form p {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  grid-area: form-description;
+}
+
+form h1 {
+  padding-top: 1rem;
 }/*# sourceMappingURL=style.css.map */

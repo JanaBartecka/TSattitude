@@ -1,0 +1,9 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.coNabizime {
+    &__title {
+        padding: v.$spacer-big 0 v.$spacer-normal 0;
+    }
+    
+}
