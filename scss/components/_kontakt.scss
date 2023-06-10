@@ -5,7 +5,8 @@
     display: grid;
     grid-template-columns: 1fr;
     //grid-template-rows: repeat(3,auto);
-    gap: v.$spacer-middle;
+    column-gap: v.$spacer-big;
+    row-gap: calc(2*v.$spacer-middle);
     //@include m.zarovnani;
     padding-top: v.$spacer-big;
 
@@ -51,14 +52,14 @@
         flex-direction: row;
     }
 
-    &__item + .contact__item {
-        padding-bottom: v.$spacer-big;
+    // &__item + .contact__item {
+    //     padding-top: v.$spacer-big;
 
-        @media screen and (min-width:v.$minwidth-tablet) {
-            padding-bottom: 0;
-            gap: v.$spacer-big;
-        }
-    }
+    //     @media screen and (min-width:v.$minwidth-tablet) {
+    //         padding-top: 0;
+    //         gap: v.$spacer-big;
+    //     }
+    // }
 
     &__adress {
         padding-bottom: 0 !important;

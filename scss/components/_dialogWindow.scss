@@ -53,7 +53,7 @@
         color: black;
         font-size: 40px;
         cursor: pointer;
-        border-radius: 50%;
+        //border-radius: 50%;
         background-color: var(--secondaryColor);
         border: none;
     }
@@ -65,9 +65,9 @@
     }
 
     &.active .dialog__window {
-        // opacity: 1;
+        opacity: 1;
         // display: block;
-        transition: all 100ms ease-in-out 1300ms;
+        transition: all 100ms ease-in-out 1800ms;
     }
 
     @keyframes popupAnimation   {
@@ -86,10 +86,23 @@
         }
     }
 
+    @keyframes appearance   {
+        0% {
+            opacity: 0;
+        }
+        80% {
+            opacity: 0;
+        }
+    
+        100% {
+            opacity: 1;
+        }
+    }
+
     &__content {
         & h1 {
             text-align: center;
-            padding-top: v.$spacer-big;
+            padding-top: calc(2*v.$spacer-big);
         }
 
         & h2 {
@@ -99,6 +112,7 @@
 
         &--inner {
             width: 100%;
+            animation: appearance 1800ms ease-in-out forwards;
             
             &:nth-of-type(odd) {
                 background-color: var(--backgroundColor1);
@@ -124,7 +138,8 @@
 
     &__headline {
         font-size: 2rem;
-        padding-top: 3rem;
+        text-transform: uppercase;
+        padding: 0 v.$spacer-middle;
     }
 
     &__item--grid {

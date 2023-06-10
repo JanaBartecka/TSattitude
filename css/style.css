@@ -68,6 +68,7 @@ a:hover {
   margin-right: auto;
   max-width: 100%;
   overflow: hidden;
+  padding-bottom: 4rem;
 }
 @media screen and (min-width: 63rem) {
   .section__inner {
@@ -92,7 +93,7 @@ a:hover {
   justify-content: center;
   justify-items: stretch;
   align-items: stretch;
-  gap: 1.5rem;
+  gap: 2rem;
   width: 100%;
   padding: 2rem 1.5rem;
   margin-left: auto;
@@ -113,7 +114,7 @@ a:hover {
 .grid__cards--lekce {
   padding-bottom: 2rem;
 }
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: 64rem) {
   .grid__cards--lekce {
     grid-template-columns: repeat(2, minmax(300px, 10fr));
   }
@@ -131,7 +132,7 @@ a:hover {
     width: calc(500px - 3rem - 2rem);
   }
 }
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: 64rem) {
   .grid__item {
     width: calc(50vw - 4rem - 1.5rem - 2rem);
   }
@@ -150,7 +151,7 @@ a:hover {
     width: calc(500px - 3rem - 2rem);
   }
 }
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: 64rem) {
   .grid__item--cover {
     width: calc(50vw - 4rem - 1.5rem - 2rem);
   }
@@ -291,11 +292,20 @@ a:hover {
 }
 .aktualne__title {
   text-align: center;
-  height: 4rem;
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 42rem) {
+  .aktualne__title {
+    height: 5rem;
+  }
 }
 .aktualne__date {
   text-align: center;
-  height: 2rem;
+}
+@media screen and (min-width: 42rem) {
+  .aktualne__date {
+    height: 2rem;
+  }
 }
 .aktualne__img {
   width: 100%;
@@ -314,6 +324,7 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 1px;
+  margin-bottom: 2rem;
 }
 .why__headline {
   padding-top: 2rem;
@@ -326,6 +337,7 @@ a:hover {
   flex-wrap: wrap;
   align-items: flex-start;
   flex: 1 1 33%;
+  gap: 1.5rem;
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
@@ -340,10 +352,10 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   flex: 1 1 100%;
-  padding: 2rem 1.5rem;
+  padding: 2rem 0 0 0;
   margin-left: auto;
   margin-right: auto;
-  max-width: 350px;
+  max-width: 330px;
   min-width: 250px;
 }
 .why__img {
@@ -356,7 +368,7 @@ a:hover {
   font-weight: 300;
   font-size: 1.5rem;
   text-align: center;
-  padding-top: 1rem;
+  padding-top: 1.5rem;
 }
 
 .menu {
@@ -632,13 +644,13 @@ a:hover {
 .lektorky__name {
   text-transform: uppercase;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   font-size: 30px;
   transform: translateX(-50%);
   text-align: center;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
@@ -652,7 +664,7 @@ a:hover {
   transform: translateX(-50%);
   height: 30px;
   width: 30px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 50%;
   border: solid 2px var(--primaryColor);
 }
@@ -789,7 +801,9 @@ a:hover {
 .contact {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  row-gap: 3rem;
   padding-top: 2rem;
 }
 .contact--hover:hover {
@@ -823,15 +837,6 @@ a:hover {
   display: flex;
   flex: 1 1 100%;
   flex-direction: row;
-}
-.contact__item + .contact__item {
-  padding-bottom: 2rem;
-}
-@media screen and (min-width: 42rem) {
-  .contact__item + .contact__item {
-    padding-bottom: 0;
-    gap: 2rem;
-  }
 }
 .contact__adress {
   padding-bottom: 0 !important;
@@ -910,7 +915,7 @@ a:hover {
     width: calc(500px - 3rem - 2rem);
   }
 }
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: 64rem) {
   .heading-frame {
     width: calc(50vw - 4rem - 1.5rem - 2rem);
   }
@@ -926,13 +931,18 @@ a:hover {
 
 .heading-frame__topRight {
   font-family: "Pragati Narrow", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   width: 100%;
   text-align: right;
   display: grid;
   gap: 10px;
   grid-template-columns: 1fr max-content;
   text-transform: uppercase;
+}
+@media screen and (min-width: 42rem) {
+  .heading-frame__topRight {
+    font-size: 1.5rem;
+  }
 }
 .heading-frame__topRight:before {
   content: "";
@@ -958,13 +968,18 @@ a:hover {
 
 .heading-frame__bottomLeft {
   font-family: "Pragati Narrow", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   width: 100%;
   text-align: left;
   display: grid;
   gap: 10px;
   grid-template-columns: max-content 1fr;
   text-transform: uppercase;
+}
+@media screen and (min-width: 42rem) {
+  .heading-frame__bottomLeft {
+    font-size: 1.5rem;
+  }
 }
 .heading-frame__bottomLeft:after {
   content: "";
@@ -1070,12 +1085,16 @@ a:hover {
   flex: 1 1 45%;
   row-gap: 2rem;
 }
+.counters__description {
+  text-align: center;
+}
 .counters__card {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   min-width: 150px;
+  flex-basis: 25%;
 }
 @media screen and (min-width: 42rem) {
   .counters__card {
@@ -1162,7 +1181,6 @@ a:hover {
   color: black;
   font-size: 40px;
   cursor: pointer;
-  border-radius: 50%;
   background-color: var(--secondaryColor);
   border: none;
 }
@@ -1171,7 +1189,8 @@ a:hover {
   animation: popupAnimation 1500ms ease-in-out forwards;
 }
 .dialog.active .dialog__window {
-  transition: all 100ms ease-in-out 1300ms;
+  opacity: 1;
+  transition: all 100ms ease-in-out 1800ms;
 }
 @keyframes popupAnimation {
   0% {
@@ -1187,9 +1206,20 @@ a:hover {
     height: 100%;
   }
 }
+@keyframes appearance {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .dialog__content h1 {
   text-align: center;
-  padding-top: 2rem;
+  padding-top: 4rem;
 }
 .dialog__content h2 {
   padding-top: 1rem;
@@ -1197,6 +1227,7 @@ a:hover {
 }
 .dialog__content--inner {
   width: 100%;
+  animation: appearance 1800ms ease-in-out forwards;
 }
 .dialog__content--inner:nth-of-type(odd) {
   background-color: var(--backgroundColor1);
@@ -1216,7 +1247,8 @@ a:hover {
 }
 .dialog__headline {
   font-size: 2rem;
-  padding-top: 3rem;
+  text-transform: uppercase;
+  padding: 0 1.5rem;
 }
 .dialog__item--grid {
   padding: 1.5rem 1rem 2rem 1rem;
@@ -1322,6 +1354,8 @@ a:hover {
   }
   .box h1 {
     grid-area: formTitle;
+    padding-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
   }
   .box .box input[type=email] {
     grid-area: form-email;

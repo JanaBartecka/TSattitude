@@ -4,6 +4,7 @@
 .section__inner {
     @include m.zarovnani;
     overflow: hidden;
+    padding-bottom: calc(2*v.$spacer-big);
 }
   
 .section__1 {
@@ -25,7 +26,7 @@
         justify-content: center;
         justify-items: stretch;
         align-items: stretch;
-        gap: v.$spacer-middle;
+        gap: v.$spacer-big;
         width: 100%;
         @include m.zarovnani;
         padding: v.$spacer-middle 0 0 0;

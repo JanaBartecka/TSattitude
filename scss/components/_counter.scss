@@ -31,6 +31,10 @@
   flex: 1 1 calc(45%);
   row-gap: v.$spacer-big;
 
+  &__description {
+    text-align: center;
+  }
+
 
 
   &__card {
@@ -39,6 +43,7 @@
     align-items: center;
     flex-direction: column;
     min-width:150px;
+    flex-basis: 25%;
     @media screen and (min-width:v.$minwidth-tablet) {
       min-width:180px;
     }
