@@ -19,11 +19,11 @@
     }
 
     &__headline {
-        padding-top: v.$spacer-big;
         font-weight: 600;
         text-align: center;
         padding-top: v.$spacer-normal;
-
+        padding-bottom: v.$spacer-big;
+        font-size: 2rem;
     }
 
     &__cards {

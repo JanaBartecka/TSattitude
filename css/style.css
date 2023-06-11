@@ -327,10 +327,11 @@ a:hover {
   margin-bottom: 2rem;
 }
 .why__headline {
-  padding-top: 2rem;
   font-weight: 600;
   text-align: center;
   padding-top: 1rem;
+  padding-bottom: 2rem;
+  font-size: 2rem;
 }
 .why__cards {
   display: flex;
@@ -409,6 +410,11 @@ a:hover {
 .menu__icon--full {
   margin-right: 0px;
   margin-top: 250px;
+}
+.menu__icon--logo {
+  height: 70px;
+  width: 70px;
+  justify-self: flex-start;
 }
 .menu__list {
   display: none;
