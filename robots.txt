@@ -1,4 +1,4 @@
 Sitemap: https://www.ts-attitude.com/sitemap.xml
 
 User-agent: *
-Disallow:
+Disallow: /

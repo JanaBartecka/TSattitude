@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: v.$spacer-big 0;
+    padding: calc(2*v.$spacer-big) 0;
 }
 
 .box {

@@ -753,16 +753,16 @@ a:hover {
   background: #333 url(/images/lekce/ZACHOBBY-MINIDETI.jpg) center;
 }
 .lekce__background--10 {
-  background: #333 url(/images/lekce/baby_sportik.PNG) center;
+  background: #333 url(/images/lekce/zachobby-streetDance-deti.jpg) center;
 }
 .lekce__background--11 {
-  background: #333 url(/images/lekce/baby_sportik.PNG) center;
+  background: #333 url(/images/lekce/zachobby-streetDance-juniori.jpg) center;
 }
 .lekce__background--12 {
   background: #333 url(/images/lekce/STREETDANCEZAAHOBBY-DOSPELI.jpg) center;
 }
 .lekce__background--13 {
-  background: #333 url(/images/lekce/STREETDANCEVYBEROVE-DETI.jpg) center;
+  background: #333 url(/images/lekce/basicVyberove-streetDance-deti.jpg) center;
 }
 .lekce__background--14 {
   background: #333 url(/images/lekce/STREETDANCEBASIC-VYBEROVE-JUNIORI.jpg) center;
@@ -1356,7 +1356,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0;
+  padding: 4rem 0;
 }
 
 .box {
