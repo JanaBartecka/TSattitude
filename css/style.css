@@ -11,6 +11,20 @@
   --darkBrightness:1;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primaryColor:#e6e6e6;
+    --secondaryColor:#00dedb;
+    --tertiaryColor:#191919;
+    --buttonColor:#E2D686;
+    --textColor1:var(--primaryColor);
+    --textColor2:var(--backgroundColor1);
+    --lightColor:white;
+    --backgroundColor1:#000000;
+    --backgroundColor2:var(--primaryColor);
+    --darkBrightness:1;
+  }
+}
 html {
   box-sizing: border-box;
 }
@@ -727,7 +741,7 @@ a:hover {
   background: #333 url(/images/lekce/PROZABAVU-MAMIATATIGANG.jpg) center;
 }
 .lekce__background--6 {
-  background: #333 url(/images/lekce/baby_sportik.PNG) center;
+  background: #333 url(/images/lekce/PROZABAVU-BREAKDANCE.jpg) center;
 }
 .lekce__background--7 {
   background: #333 url(/images/lekce/PROZABAVU-POLEDANCEVZDUSNAAKROBACIE.jpg) center;
@@ -755,6 +769,12 @@ a:hover {
 }
 .lekce__background--15 {
   background: #333 url(/images/lekce/STREETDANCEVYBEROVE-DOSPELI.jpg) center;
+}
+.lekce__background--16 {
+  background: #333 url(/images/lekce/STREETDANCEZACAHOBBY-JAROMER-DETI.jpg) center;
+}
+.lekce__background--17 {
+  background: #333 url(/images/lekce/STREETDANCEZAAHOBBY-JAROMER-JUNIORI.jpg) center;
 }
 .lekce__title {
   text-align: center;
@@ -1459,4 +1479,21 @@ form p {
 
 form h1 {
   padding-top: 1rem;
+}
+
+/* Form result */
+.form-result {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+}
+
+.success {
+  background-color: #239b28;
+}
+
+.error {
+  background-color: #a01b30;
 }/*# sourceMappingURL=style.css.map */

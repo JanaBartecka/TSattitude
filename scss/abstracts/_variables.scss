@@ -18,22 +18,25 @@
 
 }
 
-// @media (prefers-color-scheme: dark){
-//     :root {
-//         --primaryColor:#679436;
-//         --primaryColor-similar:#BAD29F;
-//         --secondaryColor:#e0c455;
-//         --tertiaryColor:#254232;
-//         --buttonColor:#E2D686;
-//         --textColor:rgb(91, 144, 125);
-//         --lightColor:white;
-//         // --focusColor:#B309A6;
-//         --greyColor: #E0E2DB;
-//         --greyDarkColor: #889696;
-//         --backgroundColor:white;
-//         --darkBrightness:0.8;
-//     }
-// }
+ @media (prefers-color-scheme: dark){
+     :root {
+    --primaryColor:#e6e6e6;
+    //--secondaryColor:#fcf633;
+    --secondaryColor:#00dedb;
+    --tertiaryColor:#191919;
+    --buttonColor:#E2D686;
+    --textColor1:var(--primaryColor);
+    --textColor2:var(--backgroundColor1);
+    --lightColor:white;
+    // --focusColor:#B309A6;
+    // --greyColor: #E0E2DB;
+    // --greyDarkColor: #889696;
+    //--backgroundColor1:#404040;
+    --backgroundColor1:#000000;
+    --backgroundColor2:var(--primaryColor);
+    --darkBrightness:1;
+    }
+}
 
 $spacer-normal:1rem;
 $spacer-small:0.5rem;

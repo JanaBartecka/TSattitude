@@ -153,3 +153,19 @@ form p {
 form h1 {
     padding-top: v.$spacer-normal;
 }
+
+/* Form result */
+.form-result{
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    }
+    .success {
+    background-color: #239b28;
+    }
+    .error {
+    background-color: #a01b30;
+    }
+    
